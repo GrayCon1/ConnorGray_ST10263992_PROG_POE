@@ -6,7 +6,7 @@
       "type": "process",
       "args": [
         "build",
-        "${workspaceFolder}/ConnorGray_ST10263992_PROG6221_POE.csproj",
+        "${workspaceFolder}/ConnorGray_ST10263992_PROG6221_POE/ConnorGray_ST10263992_PROG6221_POE.csproj",
         "/property:GenerateFullPaths=true",
         "/consoleloggerparameters:NoSummary"
       ],

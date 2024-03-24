@@ -1,14 +1,29 @@
-C:\Users\conno\OneDrive\Documents\UNI\YR2\Prog\New folder\ConnorGray_ST10263992_PROG6221_POE\bin\Debug\net8.0\ConnorGray_ST10263992_PROG6221_POE.exe
-C:\Users\conno\OneDrive\Documents\UNI\YR2\Prog\New folder\ConnorGray_ST10263992_PROG6221_POE\bin\Debug\net8.0\ConnorGray_ST10263992_PROG6221_POE.deps.json
-C:\Users\conno\OneDrive\Documents\UNI\YR2\Prog\New folder\ConnorGray_ST10263992_PROG6221_POE\bin\Debug\net8.0\ConnorGray_ST10263992_PROG6221_POE.runtimeconfig.json
-C:\Users\conno\OneDrive\Documents\UNI\YR2\Prog\New folder\ConnorGray_ST10263992_PROG6221_POE\bin\Debug\net8.0\ConnorGray_ST10263992_PROG6221_POE.dll
-C:\Users\conno\OneDrive\Documents\UNI\YR2\Prog\New folder\ConnorGray_ST10263992_PROG6221_POE\bin\Debug\net8.0\ConnorGray_ST10263992_PROG6221_POE.pdb
-C:\Users\conno\OneDrive\Documents\UNI\YR2\Prog\New folder\ConnorGray_ST10263992_PROG6221_POE\obj\Debug\net8.0\ConnorGray_ST10263992_PROG6221_POE.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\conno\OneDrive\Documents\UNI\YR2\Prog\New folder\ConnorGray_ST10263992_PROG6221_POE\obj\Debug\net8.0\ConnorGray_ST10263992_PROG6221_POE.AssemblyInfoInputs.cache
-C:\Users\conno\OneDrive\Documents\UNI\YR2\Prog\New folder\ConnorGray_ST10263992_PROG6221_POE\obj\Debug\net8.0\ConnorGray_ST10263992_PROG6221_POE.AssemblyInfo.cs
-C:\Users\conno\OneDrive\Documents\UNI\YR2\Prog\New folder\ConnorGray_ST10263992_PROG6221_POE\obj\Debug\net8.0\ConnorGray_ST10263992_PROG6221_POE.csproj.CoreCompileInputs.cache
-C:\Users\conno\OneDrive\Documents\UNI\YR2\Prog\New folder\ConnorGray_ST10263992_PROG6221_POE\obj\Debug\net8.0\ConnorGray_ST10263992_PROG6221_POE.dll
-C:\Users\conno\OneDrive\Documents\UNI\YR2\Prog\New folder\ConnorGray_ST10263992_PROG6221_POE\obj\Debug\net8.0\refint\ConnorGray_ST10263992_PROG6221_POE.dll
-C:\Users\conno\OneDrive\Documents\UNI\YR2\Prog\New folder\ConnorGray_ST10263992_PROG6221_POE\obj\Debug\net8.0\ConnorGray_ST10263992_PROG6221_POE.pdb
-C:\Users\conno\OneDrive\Documents\UNI\YR2\Prog\New folder\ConnorGray_ST10263992_PROG6221_POE\obj\Debug\net8.0\ConnorGray_ST10263992_PROG6221_POE.genruntimeconfig.cache
-C:\Users\conno\OneDrive\Documents\UNI\YR2\Prog\New folder\ConnorGray_ST10263992_PROG6221_POE\obj\Debug\net8.0\ref\ConnorGray_ST10263992_PROG6221_POE.dll
+C:/Users/conno/OneDrive/Documents/UNI/YR2/Prog/New folder/ConnorGray_ST10263992_PROG6221_POE/bin/Debug/net8.0/ConnorGray_ST10263992_PROG6221_POE.exe
+C:/Users/conno/OneDrive/Documents/UNI/YR2/Prog/New folder/ConnorGray_ST10263992_PROG6221_POE/bin/Debug/net8.0/ConnorGray_ST10263992_PROG6221_POE.deps.json
+C:/Users/conno/OneDrive/Documents/UNI/YR2/Prog/New folder/ConnorGray_ST10263992_PROG6221_POE/bin/Debug/net8.0/ConnorGray_ST10263992_PROG6221_POE.runtimeconfig.json
+C:/Users/conno/OneDrive/Documents/UNI/YR2/Prog/New folder/ConnorGray_ST10263992_PROG6221_POE/bin/Debug/net8.0/ConnorGray_ST10263992_PROG6221_POE.dll
+C:/Users/conno/OneDrive/Documents/UNI/YR2/Prog/New folder/ConnorGray_ST10263992_PROG6221_POE/bin/Debug/net8.0/ConnorGray_ST10263992_PROG6221_POE.pdb
+C:/Users/conno/OneDrive/Documents/UNI/YR2/Prog/New folder/ConnorGray_ST10263992_PROG6221_POE/obj/Debug/net8.0/ConnorGray_ST10263992_PROG6221_POE.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/conno/OneDrive/Documents/UNI/YR2/Prog/New folder/ConnorGray_ST10263992_PROG6221_POE/obj/Debug/net8.0/ConnorGray_ST10263992_PROG6221_POE.AssemblyInfoInputs.cache
+C:/Users/conno/OneDrive/Documents/UNI/YR2/Prog/New folder/ConnorGray_ST10263992_PROG6221_POE/obj/Debug/net8.0/ConnorGray_ST10263992_PROG6221_POE.AssemblyInfo.cs
+C:/Users/conno/OneDrive/Documents/UNI/YR2/Prog/New folder/ConnorGray_ST10263992_PROG6221_POE/obj/Debug/net8.0/ConnorGray_ST10263992_PROG6221_POE.csproj.CoreCompileInputs.cache
+C:/Users/conno/OneDrive/Documents/UNI/YR2/Prog/New folder/ConnorGray_ST10263992_PROG6221_POE/obj/Debug/net8.0/ConnorGray_ST10263992_PROG6221_POE.dll
+C:/Users/conno/OneDrive/Documents/UNI/YR2/Prog/New folder/ConnorGray_ST10263992_PROG6221_POE/obj/Debug/net8.0/refint/ConnorGray_ST10263992_PROG6221_POE.dll
+C:/Users/conno/OneDrive/Documents/UNI/YR2/Prog/New folder/ConnorGray_ST10263992_PROG6221_POE/obj/Debug/net8.0/ConnorGray_ST10263992_PROG6221_POE.pdb
+C:/Users/conno/OneDrive/Documents/UNI/YR2/Prog/New folder/ConnorGray_ST10263992_PROG6221_POE/obj/Debug/net8.0/ConnorGray_ST10263992_PROG6221_POE.genruntimeconfig.cache
+C:/Users/conno/OneDrive/Documents/UNI/YR2/Prog/New folder/ConnorGray_ST10263992_PROG6221_POE/obj/Debug/net8.0/ref/ConnorGray_ST10263992_PROG6221_POE.dll
+/Users/connorgray/Documents/Code/POE/ConnorGray_ST10263992_PROG_POE/ConnorGray_ST10263992_PROG6221_POE/bin/Debug/net8.0/ConnorGray_ST10263992_PROG6221_POE
+/Users/connorgray/Documents/Code/POE/ConnorGray_ST10263992_PROG_POE/ConnorGray_ST10263992_PROG6221_POE/bin/Debug/net8.0/ConnorGray_ST10263992_PROG6221_POE.deps.json
+/Users/connorgray/Documents/Code/POE/ConnorGray_ST10263992_PROG_POE/ConnorGray_ST10263992_PROG6221_POE/bin/Debug/net8.0/ConnorGray_ST10263992_PROG6221_POE.runtimeconfig.json
+/Users/connorgray/Documents/Code/POE/ConnorGray_ST10263992_PROG_POE/ConnorGray_ST10263992_PROG6221_POE/bin/Debug/net8.0/ConnorGray_ST10263992_PROG6221_POE.dll
+/Users/connorgray/Documents/Code/POE/ConnorGray_ST10263992_PROG_POE/ConnorGray_ST10263992_PROG6221_POE/bin/Debug/net8.0/ConnorGray_ST10263992_PROG6221_POE.pdb
+/Users/connorgray/Documents/Code/POE/ConnorGray_ST10263992_PROG_POE/ConnorGray_ST10263992_PROG6221_POE/obj/Debug/net8.0/ConnorGray_ST10263992_PROG6221_POE.GeneratedMSBuildEditorConfig.editorconfig
+/Users/connorgray/Documents/Code/POE/ConnorGray_ST10263992_PROG_POE/ConnorGray_ST10263992_PROG6221_POE/obj/Debug/net8.0/ConnorGray_ST10263992_PROG6221_POE.AssemblyInfoInputs.cache
+/Users/connorgray/Documents/Code/POE/ConnorGray_ST10263992_PROG_POE/ConnorGray_ST10263992_PROG6221_POE/obj/Debug/net8.0/ConnorGray_ST10263992_PROG6221_POE.AssemblyInfo.cs
+/Users/connorgray/Documents/Code/POE/ConnorGray_ST10263992_PROG_POE/ConnorGray_ST10263992_PROG6221_POE/obj/Debug/net8.0/ConnorGray_ST10263992_PROG6221_POE.csproj.CoreCompileInputs.cache
+/Users/connorgray/Documents/Code/POE/ConnorGray_ST10263992_PROG_POE/ConnorGray_ST10263992_PROG6221_POE/obj/Debug/net8.0/ConnorGray_ST10263992_PROG6221_POE.sourcelink.json
+/Users/connorgray/Documents/Code/POE/ConnorGray_ST10263992_PROG_POE/ConnorGray_ST10263992_PROG6221_POE/obj/Debug/net8.0/ConnorGray_ST10263992_PROG6221_POE.dll
+/Users/connorgray/Documents/Code/POE/ConnorGray_ST10263992_PROG_POE/ConnorGray_ST10263992_PROG6221_POE/obj/Debug/net8.0/refint/ConnorGray_ST10263992_PROG6221_POE.dll
+/Users/connorgray/Documents/Code/POE/ConnorGray_ST10263992_PROG_POE/ConnorGray_ST10263992_PROG6221_POE/obj/Debug/net8.0/ConnorGray_ST10263992_PROG6221_POE.pdb
+/Users/connorgray/Documents/Code/POE/ConnorGray_ST10263992_PROG_POE/ConnorGray_ST10263992_PROG6221_POE/obj/Debug/net8.0/ConnorGray_ST10263992_PROG6221_POE.genruntimeconfig.cache
+/Users/connorgray/Documents/Code/POE/ConnorGray_ST10263992_PROG_POE/ConnorGray_ST10263992_PROG6221_POE/obj/Debug/net8.0/ref/ConnorGray_ST10263992_PROG6221_POE.dll
