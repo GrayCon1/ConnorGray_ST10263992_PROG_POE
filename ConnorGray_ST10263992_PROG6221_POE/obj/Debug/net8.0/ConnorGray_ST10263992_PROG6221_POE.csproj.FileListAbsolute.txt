@@ -1,0 +1,14 @@
+C:\Users\conno\OneDrive\Documents\UNI\YR2\Prog\New folder\ConnorGray_ST10263992_PROG6221_POE\bin\Debug\net8.0\ConnorGray_ST10263992_PROG6221_POE.exe
+C:\Users\conno\OneDrive\Documents\UNI\YR2\Prog\New folder\ConnorGray_ST10263992_PROG6221_POE\bin\Debug\net8.0\ConnorGray_ST10263992_PROG6221_POE.deps.json
+C:\Users\conno\OneDrive\Documents\UNI\YR2\Prog\New folder\ConnorGray_ST10263992_PROG6221_POE\bin\Debug\net8.0\ConnorGray_ST10263992_PROG6221_POE.runtimeconfig.json
+C:\Users\conno\OneDrive\Documents\UNI\YR2\Prog\New folder\ConnorGray_ST10263992_PROG6221_POE\bin\Debug\net8.0\ConnorGray_ST10263992_PROG6221_POE.dll
+C:\Users\conno\OneDrive\Documents\UNI\YR2\Prog\New folder\ConnorGray_ST10263992_PROG6221_POE\bin\Debug\net8.0\ConnorGray_ST10263992_PROG6221_POE.pdb
+C:\Users\conno\OneDrive\Documents\UNI\YR2\Prog\New folder\ConnorGray_ST10263992_PROG6221_POE\obj\Debug\net8.0\ConnorGray_ST10263992_PROG6221_POE.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\conno\OneDrive\Documents\UNI\YR2\Prog\New folder\ConnorGray_ST10263992_PROG6221_POE\obj\Debug\net8.0\ConnorGray_ST10263992_PROG6221_POE.AssemblyInfoInputs.cache
+C:\Users\conno\OneDrive\Documents\UNI\YR2\Prog\New folder\ConnorGray_ST10263992_PROG6221_POE\obj\Debug\net8.0\ConnorGray_ST10263992_PROG6221_POE.AssemblyInfo.cs
+C:\Users\conno\OneDrive\Documents\UNI\YR2\Prog\New folder\ConnorGray_ST10263992_PROG6221_POE\obj\Debug\net8.0\ConnorGray_ST10263992_PROG6221_POE.csproj.CoreCompileInputs.cache
+C:\Users\conno\OneDrive\Documents\UNI\YR2\Prog\New folder\ConnorGray_ST10263992_PROG6221_POE\obj\Debug\net8.0\ConnorGray_ST10263992_PROG6221_POE.dll
+C:\Users\conno\OneDrive\Documents\UNI\YR2\Prog\New folder\ConnorGray_ST10263992_PROG6221_POE\obj\Debug\net8.0\refint\ConnorGray_ST10263992_PROG6221_POE.dll
+C:\Users\conno\OneDrive\Documents\UNI\YR2\Prog\New folder\ConnorGray_ST10263992_PROG6221_POE\obj\Debug\net8.0\ConnorGray_ST10263992_PROG6221_POE.pdb
+C:\Users\conno\OneDrive\Documents\UNI\YR2\Prog\New folder\ConnorGray_ST10263992_PROG6221_POE\obj\Debug\net8.0\ConnorGray_ST10263992_PROG6221_POE.genruntimeconfig.cache
+C:\Users\conno\OneDrive\Documents\UNI\YR2\Prog\New folder\ConnorGray_ST10263992_PROG6221_POE\obj\Debug\net8.0\ref\ConnorGray_ST10263992_PROG6221_POE.dll
