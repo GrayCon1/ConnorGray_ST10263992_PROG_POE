@@ -8,22 +8,30 @@ public class Ingredient
     public Ingredient(string Name, float Quantity, string Measure)
     {
         this.Name = Name;
-        this.Quantity=Quantity;
-        this.Measure=Measure;
+        this.Quantity = Quantity;
+        this.Measure = Measure;
     }
 
-public static float ScaleFactor(char ScaleFactor,float Quantity)
-{
-    double Scale;
-    if (ScaleFactor=='a')
+    public float ScaleFactor(char ScaleFactor, float Quantity)
     {
-        Scale=0.5;
-    }else if(ScaleFactor=='b'){
-        Scale=2;
-    }else{ //add exception
-        Scale=3;
+        float Scale;
+        if (ScaleFactor == 'a')
+        {
+            Scale = 0.5f;
+        }
+        else if (ScaleFactor == 'b')
+        {
+            Scale = 2;
+        }
+        else if (ScaleFactor == 'c')
+        {
+            Scale = 3;
+        }
+        else
+        {
+            throw new Exception("User did not enter a valid scale factor");
+        }
+        float scaleFactor = Scale * Quantity;
+        return scaleFactor;
     }
-    float scaleFactor=(float)Scale*Quantity;
-    return scaleFactor;
-}
 }

@@ -38,22 +38,24 @@ public class Program
         }
         RecOutput(RecName, arrSteps);
 
-        WriteLine("Would you like the scale of the recipe?:\tY/N");
-        char Response = char.Parse(ReadLine());
+        WriteLine("Would you like to change the scale of the recipe?:\tY/N");
+        char Response = char.ToLower(char.Parse(ReadLine()));
 
-        if (Response=='Y')
+        if (Response == 'y')
         {
             WriteLine("Do you want it to be:\na) Halved\tb) Doubled\tc) Tripled\nplease select 'a' or 'b' or 'c'");
-            char ScaleFactor=char.Parse(ReadLine());
-            int f=2;
+            char ScaleFactor = char.Parse(ReadLine());
+            int f = 2;
             for (int i = 0; i < arrIngredients.Length; i++)
             {
-                arrIngredients[f]
+
             }
-        }else{
+        }
+        else
+        {
             EndOfProgram();
         }
-        
+
     }
     public static void EndOfProgram()
     {
@@ -62,27 +64,24 @@ public class Program
     }
     public static void RecOutput(string RecName, string[] Steps)
     {
-        string Name="";
-        float Quantity=0;
-        string Measure="";
-
-        WriteLine(RecName + ":" + "\n==========================================================================" + "\nIngredients: (" + arrIngredients.Length
-        + ")" + "\t\tSteps: (" + Steps.Length + ")");
         int length = Math.Max(arrIngredients.Length, Steps.Length);
-        
-            for (int i = 0; i < length; i++)
-            {
-            //change
-                if (i>arrIngredients.Length)
-                {
-                  arrIngredients[i]= new Ingredient(Name,Quantity,Measure);  
-                }
+        Ingredient[] arrOutIng = new Ingredient[length];
+        string[] arrOutStep = new string[length];
+        Array.Copy(arrIngredients, arrOutIng, arrIngredients.Length);
+        Array.Copy(Steps, arrOutStep, Steps.Length);
 
-                WriteLine(i + 1 + ")" + arrIngredients[i].Name + "\t" + 
-                arrIngredients[i].Quantity + "\t" + 
-                arrIngredients[i].Measure + "\t\t" +i+1+ ")" + Steps[i]);
-            }
-        
+        WriteLine(RecName + ":" + "\n==========================================================================" +
+        "\nIngredients: (" + arrOutIng.Length
+        + ")" + "\t\tSteps: (" + arrOutStep.Length + ")");
+
+        for (int i = 0; i < length; i++)
+        {   
+           
+            WriteLine(i + 1 + ")" + arrOutIng[i]?.Name + "\t" +
+            arrOutIng[i]?.Quantity + " " +
+            arrOutIng[i]?.Measure + "\t\t\t" + (i + 1) + ")" + arrOutStep?[i]);
+        }
+
 
         WriteLine("\n==========================================================================");
     }
