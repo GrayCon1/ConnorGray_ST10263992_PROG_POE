@@ -8,7 +8,7 @@ The following project can also be found on my github repository: https://github.
 Once downloaded, unzip the files.
 
 ### Step 2
-Open the project _ConnorGray_ in the prefered IDE.
+Open the project _"ConnorGray_ST10263992_PROG_POE"_ in the prefered IDE.
 
 ### Step 3
 Once opened select to run the program. 
@@ -49,4 +49,4 @@ The user will now be prompted if they want to clear the recipe
 ## This is an example of the final output:
 <img src="Images/Screenshot 2024-04-13 at 14.13.10.jpg" alt="Steps in POE"/>
 
-# End of Program
+# !!! End of Program !!!
