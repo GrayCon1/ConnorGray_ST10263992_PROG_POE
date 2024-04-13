@@ -6,6 +6,7 @@ The following project can also be found on my github repository: https://github.
 ## How to use the project:
 ### Step 1
 Once downloaded, unzip the files.
+<img src="Images/Step 1.png" width="640" height="360" alt="Step 1 in POE"/>
 
 ### Step 2
 Open the project _ConnorGray_ in the prefered IDE.
