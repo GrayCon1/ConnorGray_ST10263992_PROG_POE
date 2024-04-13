@@ -6,7 +6,6 @@ The following project can also be found on my github repository: https://github.
 ## How to use the project:
 ### Step 1
 Once downloaded, unzip the files.
-<img src="Images/Step 1.png" width="640" height="360" alt="Step 1 in POE"/>
 
 ### Step 2
 Open the project _ConnorGray_ in the prefered IDE.
@@ -46,5 +45,8 @@ If the user selects yes they the original recipe will be outputted.
 
 ### Step 14
 The user will now be prompted if they want to clear the recipe
+
+## This is an example of the final output:
+<img src="Images/Screenshot 2024-04-13 at 14.13.10.jpg" alt="Steps in POE"/>
 
 # End of Program

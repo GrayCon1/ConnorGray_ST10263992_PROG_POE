@@ -15,6 +15,7 @@ private static char Response;
         int IngNum = int.Parse(ReadLine());
 
         arrIngredients = new Ingredient[IngNum];
+        //Loop for user to enter ingredient information
         for (int i = 0; i < IngNum; i++)
         {
             Write("Enter the Name of ingredient number " + (i + 1) + ":");
@@ -25,23 +26,27 @@ private static char Response;
 
             Write("Enter the Unit of Measure of ingredient number " + (i + 1) + ":");
             string Measure = ReadLine();
-
+            //Ingredients being stored into an array
             arrIngredients[i] = new Ingredient(Name, Quantity, Measure);
         }
         Write("How many steps are in the " + RecName + " recipe?");
+        
+        //storing of number of steps into an array
         int NumSteps = int.Parse(ReadLine());
-
         string[] arrSteps = new string[NumSteps];
+        
         for (int i = 0; i < NumSteps; i++)
         {
             Write("Enter the Description of step number " + (i + 1) + ":");
             arrSteps[i] = ReadLine();
         }
+
+        //Output of different ingredients and steps
         RecOutput(RecName, arrSteps);
-        //
+        
         WriteLine("Would you like to change the scale of the recipe?:\tY/N");
         Response = char.ToLower(char.Parse(ReadLine()));
-
+        //Changing of scale factor
         if (Response == 'y')
         {
             WriteLine("Do you want it to be:\n\na) Halved\tb) Doubled\tc) Tripled\n\nplease select 'a' or 'b' or 'c'");
@@ -54,9 +59,9 @@ private static char Response;
         }
         else
         {
-            EndOfProgram();
+            Clear();
         }
-        //
+    
         WriteLine("Would you like to reset the scale of the recipe?:\tY/N");
         Response = char.ToLower(char.Parse(ReadLine()));
         if (Response == 'y')
@@ -66,17 +71,18 @@ private static char Response;
                 arrIngredients[i].ResetScaleFactor();
             }
             RecOutput(RecName, arrSteps);
+            Clear();
         }
         else if (Response == 'n')
         {
+           
             Clear();
-        }
-        else
-        {
-            EndOfProgram();
         }
  
     }
+    /// <summary>
+    /// Clear method used to check if user wants to clear printed recipe
+    /// </summary>
     public static void Clear()
     {
         WriteLine("Would you like to clear this recipe?:\t" + RecName + "\tY/N");
@@ -90,11 +96,19 @@ private static char Response;
             EndOfProgram();
         }
     }
+    /// <summary>
+    /// EndOfProgram method used to terminate program 
+    /// </summary>
     public static void EndOfProgram()
     {
         WriteLine("Enter any key to terminate appliaction");
         ReadKey();
     }
+    /// <summary>
+    /// RecOutput is a method used to display the full recipe that includes ingredients and steps as well as if the scale factor has been affected
+    /// </summary>
+    /// <param name="RecName"></param>
+    /// <param name="Steps"></param>
     public static void RecOutput(string RecName, string[] Steps)
     {
         int length = Math.Max(arrIngredients.Length, Steps.Length);
@@ -119,3 +133,4 @@ private static char Response;
         WriteLine("\n==========================================================================");
     }
 }
+//=========================================================== EndOfProgram ===========================================================//
