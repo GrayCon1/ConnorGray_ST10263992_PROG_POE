@@ -47,7 +47,7 @@ public class Ingredient
         }
         else
         {
-            throw new Exception("User did not enter a valid scale factor");
+            throw new Exception("User did not enter a valid scale factor"); //use of exceptions
         }
         ResetScale=Scale;
         float scaleFactor = Scale * Quantity;

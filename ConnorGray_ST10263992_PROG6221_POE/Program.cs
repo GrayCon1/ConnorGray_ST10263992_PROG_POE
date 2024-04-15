@@ -21,10 +21,10 @@ private static char Response;
             Write("Enter the Name of ingredient number " + (i + 1) + ":");
             string Name = ReadLine();
 
-            Write("Enter the Quantity of ingredient number " + (i + 1) + ":");
+            Write("Enter the Quantity of '"+  Name +"'" + ":");
             float Quantity = float.Parse(ReadLine());
 
-            Write("Enter the Unit of Measure of ingredient number " + (i + 1) + ":");
+            Write("Enter the Unit of Measure for '"+  Name +"'" + ":");
             string Measure = ReadLine();
             //Ingredients being stored into an array
             arrIngredients[i] = new Ingredient(Name, Quantity, Measure);
@@ -35,6 +35,7 @@ private static char Response;
         int NumSteps = int.Parse(ReadLine());
         string[] arrSteps = new string[NumSteps];
         
+        //Loop for user to enter description of each needed step
         for (int i = 0; i < NumSteps; i++)
         {
             Write("Enter the Description of step number " + (i + 1) + ":");
@@ -49,6 +50,7 @@ private static char Response;
         //Changing of scale factor
         if (Response == 'y')
         {
+            //user enters char value of either "a" + "b" + "c", corresponds to scale factors
             WriteLine("Do you want it to be:\n\na) Halved\tb) Doubled\tc) Tripled\n\nplease select 'a' or 'b' or 'c'");
             char scaleFactor = char.Parse(ReadLine());
             for (int i = 0; i < arrIngredients.Length; i++)
@@ -89,6 +91,7 @@ private static char Response;
         Response = char.ToLower(char.Parse(ReadLine()));
         if (Response == 'y')
         {
+            //restarts the program
             Main();
         }
         else
