@@ -46,7 +46,7 @@ private static char Response;
         RecOutput(RecName, arrSteps);
         
         WriteLine("Would you like to change the scale of the recipe?:\tY/N");
-        Response = char.ToLower(char.Parse(ReadLine()));
+        Response = char.ToLower(char.Parse(ReadLine())); //Troelsen and Japikse (2024: page 76 num)
         //Changing of scale factor
         if (Response == 'y')
         {
@@ -136,4 +136,8 @@ private static char Response;
         WriteLine("\n==========================================================================");
     }
 }
+#region Reference List
+/*Troelsen, A.and Japikse, P. 2024. Pro C# 9 with .NET 5.
+         New York: Apress.*/
+#endregion
 //=========================================================== EndOfProgram ===========================================================//

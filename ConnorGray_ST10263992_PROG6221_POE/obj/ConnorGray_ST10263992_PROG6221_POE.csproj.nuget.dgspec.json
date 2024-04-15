@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/connorgray/Documents/Code/POE/ConnorGray_ST10263992_PROG_POE/ConnorGray_ST10263992_PROG6221_POE/ConnorGray_ST10263992_PROG6221_POE.csproj": {}
+    "C:\\Users\\conno\\Source\\Repos\\ConnorGray_ST10263992_PROG_POE\\ConnorGray_ST10263992_PROG6221_POE\\ConnorGray_ST10263992_PROG6221_POE.csproj": {}
   },
   "projects": {
-    "/Users/connorgray/Documents/Code/POE/ConnorGray_ST10263992_PROG_POE/ConnorGray_ST10263992_PROG6221_POE/ConnorGray_ST10263992_PROG6221_POE.csproj": {
+    "C:\\Users\\conno\\Source\\Repos\\ConnorGray_ST10263992_PROG_POE\\ConnorGray_ST10263992_PROG6221_POE\\ConnorGray_ST10263992_PROG6221_POE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/connorgray/Documents/Code/POE/ConnorGray_ST10263992_PROG_POE/ConnorGray_ST10263992_PROG6221_POE/ConnorGray_ST10263992_PROG6221_POE.csproj",
+        "projectUniqueName": "C:\\Users\\conno\\Source\\Repos\\ConnorGray_ST10263992_PROG_POE\\ConnorGray_ST10263992_PROG6221_POE\\ConnorGray_ST10263992_PROG6221_POE.csproj",
         "projectName": "ConnorGray_ST10263992_PROG6221_POE",
-        "projectPath": "/Users/connorgray/Documents/Code/POE/ConnorGray_ST10263992_PROG_POE/ConnorGray_ST10263992_PROG6221_POE/ConnorGray_ST10263992_PROG6221_POE.csproj",
-        "packagesPath": "/Users/connorgray/.nuget/packages/",
-        "outputPath": "/Users/connorgray/Documents/Code/POE/ConnorGray_ST10263992_PROG_POE/ConnorGray_ST10263992_PROG6221_POE/obj/",
+        "projectPath": "C:\\Users\\conno\\Source\\Repos\\ConnorGray_ST10263992_PROG_POE\\ConnorGray_ST10263992_PROG6221_POE\\ConnorGray_ST10263992_PROG6221_POE.csproj",
+        "packagesPath": "C:\\Users\\conno\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\conno\\Source\\Repos\\ConnorGray_ST10263992_PROG_POE\\ConnorGray_ST10263992_PROG6221_POE\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/connorgray/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\conno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -58,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
