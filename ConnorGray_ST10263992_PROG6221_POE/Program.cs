@@ -5,10 +5,11 @@ namespace ConnorGray_ST10263992_PROG6221_POE;
 public class Program
 {
     private static Ingredient[] arrIngredients;
-private static string RecName;
-private static char Response;
+    private static string RecName;
+    private static char Response;
     private static void Main()
     {
+        //start of program
         Write("Enter the name for the recipe: ");
           RecName = ReadLine();
         Write("How many different ingredients are used?: ");
@@ -55,6 +56,7 @@ private static char Response;
             char scaleFactor = char.Parse(ReadLine());
             for (int i = 0; i < arrIngredients.Length; i++)
             {
+                //changing the scale of the quanitiy of the specific ingredient by making use of the created scale factor method
                 arrIngredients[i].Quantity = arrIngredients[i].ScaleFactor(scaleFactor);
             }
             RecOutput(RecName, arrSteps);
@@ -64,12 +66,14 @@ private static char Response;
             Clear();
         }
     
+        //setting scale factor back to orginal
         WriteLine("Would you like to reset the scale of the recipe?:\tY/N");
         Response = char.ToLower(char.Parse(ReadLine()));
         if (Response == 'y')
         {
             for (int i = 0; i < arrIngredients.Length; i++)
             {
+                ///changing the scale of the quanitiy of the specific ingredient by making use of the created scale factor method
                 arrIngredients[i].ResetScaleFactor();
             }
             RecOutput(RecName, arrSteps);
@@ -126,7 +130,7 @@ private static char Response;
 
         for (int i = 0; i < length; i++)
         {
-
+            //use of null operator //(StackOverFlow, 2015)
             WriteLine(i + 1 + ")" + arrOutIng[i]?.Name + "\t" +
             arrOutIng[i]?.Quantity + " " +
             arrOutIng[i]?.Measure + "\t\t\t" + (i + 1) + ")" + arrOutStep?[i]);
@@ -138,6 +142,8 @@ private static char Response;
 }
 #region Reference List
 /*Troelsen, A.and Japikse, P. 2024. Pro C# 9 with .NET 5.
-         New York: Apress.*/
+         New York: Apress.
+StackOverFlow. 2015. What does question mark and dot operator ?. mean in C# 6.0?, 16 February 2015. [Online]. Available at: https://stackoverflow.com/questions/28352072/what-does-question-mark-and-dot-operator-mean-in-c-sharp-6-0 [Accessed 22 March 2024]
+*/
 #endregion
 //=========================================================== EndOfProgram ===========================================================//
