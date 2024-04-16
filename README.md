@@ -47,6 +47,6 @@ If the user selects yes they the original recipe will be outputted.
 The user will now be prompted if they want to clear the recipe
 
 ## This is an example of the final output:
-<img src="Images/Screenshot 2024-04-13 at 14.13.10.jpg" alt="Steps in POE"/>
+<img src="/Images/image (8).png" alt="Steps in POE"/>
 
 # !!! End of Program !!!

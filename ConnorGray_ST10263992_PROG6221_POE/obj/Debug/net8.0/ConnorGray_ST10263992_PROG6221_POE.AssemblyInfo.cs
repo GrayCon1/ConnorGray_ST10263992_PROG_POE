@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ConnorGray_ST10263992_PROG6221_POE")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a78be7787b78cf1e5858d26136c28ec9608cdfea")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+70374c0e9599416bdcca661131b855ebc4dabd83")]
 [assembly: System.Reflection.AssemblyProductAttribute("ConnorGray_ST10263992_PROG6221_POE")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ConnorGray_ST10263992_PROG6221_POE")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
