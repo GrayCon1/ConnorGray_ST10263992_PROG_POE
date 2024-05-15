@@ -11,7 +11,7 @@ public class Program
     {
         //start of program
         Write("Enter the name for the recipe: ");
-          RecName = ReadLine();
+        RecName = ReadLine();
         Write("How many different ingredients are used?: ");
         int IngNum = int.Parse(ReadLine());
 
@@ -22,20 +22,20 @@ public class Program
             Write("Enter the Name of ingredient number " + (i + 1) + ":");
             string Name = ReadLine();
 
-            Write("Enter the Quantity of '"+  Name +"'" + ":");
+            Write("Enter the Quantity of '" + Name + "'" + ":");
             float Quantity = float.Parse(ReadLine());
 
-            Write("Enter the Unit of Measure for '"+  Name +"'" + ":");
+            Write("Enter the Unit of Measure for '" + Name + "'" + ":");
             string Measure = ReadLine();
             //Ingredients being stored into an array
             arrIngredients[i] = new Ingredient(Name, Quantity, Measure);
         }
         Write("How many steps are in the " + RecName + " recipe?");
-        
+
         //storing of number of steps into an array
         int NumSteps = int.Parse(ReadLine());
         string[] arrSteps = new string[NumSteps];
-        
+
         //Loop for user to enter description of each needed step
         for (int i = 0; i < NumSteps; i++)
         {
@@ -45,7 +45,7 @@ public class Program
 
         //Output of different ingredients and steps
         RecOutput(RecName, arrSteps);
-        
+
         WriteLine("Would you like to change the scale of the recipe?:\tY/N");
         Response = char.ToLower(char.Parse(ReadLine())); //Troelsen and Japikse (2024: page 76 num)
         //Changing of scale factor
@@ -65,7 +65,7 @@ public class Program
         {
             Clear();
         }
-    
+
         //setting scale factor back to orginal
         WriteLine("Would you like to reset the scale of the recipe?:\tY/N");
         Response = char.ToLower(char.Parse(ReadLine()));
@@ -81,10 +81,10 @@ public class Program
         }
         else if (Response == 'n')
         {
-           
+
             Clear();
         }
- 
+
     }
     /// <summary>
     /// Clear method used to check if user wants to clear printed recipe
