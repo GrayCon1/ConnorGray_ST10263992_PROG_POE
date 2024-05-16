@@ -9,10 +9,7 @@ public class Program
 
     private static void Main()
     {
-        while (true)
-        {
-            UI();
-        }
+        UI();
     }
 
     private static void UI()
@@ -64,10 +61,17 @@ public class Program
 
     private static void ChangeScaleFactor()
     {
-        WriteLine("a) Halved\nb) Double\nc) Tripled");
-        string choice = ReadLine();
-        recipe.ChangeScaleFactor(choice);
-        recipe.DisplayRecipe();
+        try
+        {
+            WriteLine("a) Halved\nb) Double\nc) Tripled");
+            string choice = ReadLine();
+            recipe.ChangeScaleFactor(choice);
+            recipe.DisplayRecipe();
+        }
+        catch (Exception e)
+        {
+            WriteLine("Entered value not valid" + e.Message);
+        }
     }
 
     private static void DisplayRecipe()

@@ -14,31 +14,29 @@ public class Recipe
     }
     public void ChangeScaleFactor(string choice)
     {
-        choice = choice.ToLower();
-        float Scale = 0;
-        if (choice == "a")
-        {
-            Scale = 0.5f;
-        }
-        else if (choice == "b")
-        {
-            Scale = 2;
-        }
-        else if (choice == "c")
-        {
-            Scale = 3;
-        }
-        else
-        {
-            WriteLine("Did not enter a valid scale factor");
-            return;
-        }
-        for (int i = 0; i < Ingredients.Length; i++)
-        {
-            Ingredients[i].ChangeScaleFactor(Scale);
-        }
+        
+            choice = choice.ToLower();
+            float Scale = 0;
+            if (choice == "a")
+            {
+                Scale = 0.5f;
+            }
+            else if (choice == "b")
+            {
+                Scale = 2;
+            }
+            else if (choice == "c")
+            {
+                Scale = 3;
+            }
+            for (int i = 0; i < Ingredients.Length; i++)
+            {
+                Ingredients[i].ChangeScaleFactor(Scale);
+            }
+     
     }
-    public void ResetScaleFactors(){
+    public void ResetScaleFactors()
+    {
         for (int i = 0; i < Ingredients.Length; i++)
         {
             Ingredients[i].ResetScaleFactor();
