@@ -5,7 +5,7 @@ namespace ConnorGray_ST10263992_PROG6221_POE;
 public class Program
 {
     private static Recipe recipe;
-
+    private static List<String> Recipes = new List<String>();
 
     private static void Main()
     {
@@ -18,7 +18,7 @@ public class Program
         WriteLine("Recipe Creator");
         ForegroundColor = ConsoleColor.White;
         WriteLine(
-            "1. Create Recipe\n2. Display Recipe\n3. Change Scale Factor\n4. Reset Scale Factor\n5. End Program"
+            "1. Create Recipe\n2. Display Recipe\n3. Change Scale Factor\n4. Reset Scale Factor\n5. Display Saved Recipes\n6. End Program"
         );
         string input = ReadLine();
         bool success = int.TryParse(input, out int choice);
@@ -45,8 +45,11 @@ public class Program
             case 4:
                 ResetScaleFactor();
                 break;
-            default:
             case 5:
+                DisplayAll();
+                break;
+            default:
+            case 6:
                 EndOfProgram();
                 break;
         }
@@ -97,7 +100,11 @@ public class Program
             float quantity = float.Parse(ReadLine());
             WriteLine("Enter the unit of measure:");
             string unitMeasure = ReadLine();
-            recipe.CreateIngredient(i, ingredientName, quantity, unitMeasure);
+            WriteLine("Enter the calories for this ingrdient:");
+            int calories = int.Parse(ReadLine());
+            WriteLine("Enter the food group of the ingredient:");
+            string foodGroup = ReadLine();
+            recipe.CreateIngredient(i, ingredientName, quantity, unitMeasure, calories, foodGroup);
         }
 
         for (int i = 0; i < stepCountInput; i++)
@@ -106,10 +113,24 @@ public class Program
             string stepDescription = ReadLine();
             recipe.CreateStep(i, stepDescription);
         }
+        Recipes.Add(name);
         ForegroundColor = ConsoleColor.Green;
         WriteLine("Recipe Created");
         ForegroundColor = ConsoleColor.White;
         UI();
+    }
+
+    private static void DisplayAll()
+    {
+        Recipes.Sort();
+        int count = 1;
+        foreach (string recipeName in Recipes)
+        {
+            WriteLine("Recipe Names:\n" + count + ". " + recipeName);
+            count += 1;
+        }
+        WriteLine("Select a saved recipe to view:");
+        int RecipeSelected = int.Parse(ReadLine());
     }
 
     /// <summary>

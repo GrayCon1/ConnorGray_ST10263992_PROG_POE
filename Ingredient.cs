@@ -6,6 +6,8 @@ public class Ingredient
     public string Name { get; set; }
     public float Quantity { get; set; }
     public string UnitMeasure { get; set; }
+    public int Calories { get; set; }
+    public string FoodGroup { get; set; }
     private float Scale = 1;
 
     /// <summary>
@@ -14,11 +16,13 @@ public class Ingredient
     /// <param name="Name"></param>
     /// <param name="Quantity"></param>
     /// <param name="Measure"></param>
-    public Ingredient(string Name, float Quantity, string Measure)
+    public Ingredient(string name, float quantity, string measure, int calories, string foodGroup)
     {
-        this.Name = Name;
-        this.Quantity = Quantity;
-        this.UnitMeasure = Measure;
+        this.Name = name;
+        this.Quantity = quantity;
+        this.UnitMeasure = measure;
+        this.Calories = calories;
+        this.FoodGroup = foodGroup;
     }
 
     /// <summary>
