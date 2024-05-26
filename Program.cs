@@ -5,6 +5,7 @@ namespace ConnorGray_ST10263992_PROG6221_POE;
 public class Program
 {
     private static Recipe recipe;
+    private static Ingredient ingredient;
     private static List<String> Recipes = new List<String>();
 
     private static void Main()
@@ -14,11 +15,9 @@ public class Program
 
     private static void UI()
     {
-        ForegroundColor = ConsoleColor.Magenta;
-        WriteLine("Recipe Creator");
-        ForegroundColor = ConsoleColor.White;
+        Header("Recipe Creator:");
         WriteLine(
-            "1. Create Recipe\n2. Display Recipe\n3. Change Scale Factor\n4. Reset Scale Factor\n5. Display Saved Recipes\n6. End Program"
+            "\n1. Create Recipe\n2. Display Recipe\n3. Change Scale Factor\n4. Reset Scale Factor\n5. Display Saved Recipes\n6. End Program"
         );
         string input = ReadLine();
         bool success = int.TryParse(input, out int choice);
@@ -53,7 +52,7 @@ public class Program
                 EndOfProgram();
                 break;
         }
-        WriteLine("\n");
+        WriteLine("\n\n");
     }
 
     private static void ResetScaleFactor()
@@ -103,7 +102,8 @@ public class Program
             WriteLine("Enter the calories for this ingrdient:");
             int calories = int.Parse(ReadLine());
             WriteLine("Enter the food group of the ingredient:");
-            string foodGroup = ReadLine();
+            //
+            string foodGroup = ingredient.SelecetFoodGroup();
             recipe.CreateIngredient(i, ingredientName, quantity, unitMeasure, calories, foodGroup);
         }
 
@@ -114,9 +114,7 @@ public class Program
             recipe.CreateStep(i, stepDescription);
         }
         Recipes.Add(name);
-        ForegroundColor = ConsoleColor.Green;
-        WriteLine("Recipe Created");
-        ForegroundColor = ConsoleColor.White;
+        Header("Recipe Created!\n\n");
         UI();
     }
 
@@ -131,6 +129,12 @@ public class Program
         }
         WriteLine("Select a saved recipe to view:");
         int RecipeSelected = int.Parse(ReadLine());
+    }
+    private static void Header(String headerText)
+    {
+        ForegroundColor = ConsoleColor.Green;
+        WriteLine("\t" + headerText);
+        ForegroundColor = ConsoleColor.White;
     }
 
     /// <summary>

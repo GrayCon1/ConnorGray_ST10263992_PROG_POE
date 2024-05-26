@@ -32,7 +32,12 @@ public class Ingredient
     {
         Quantity /= Scale;
     }
-
+    public String SelecetFoodGroup()
+    {
+        WriteLine("\n1. Carbohydrate (Bread)\n2. Protein (Beef)\n3. Fats (Butter)\n4. Vitmins (Oranges-Vitimin C)\n5. Minerals (Spinch-Iron)\n6. Fibre (Oats)\n7. Water");
+        String choice = ReadLine();
+        return choice;
+    }
     /// <summary>
     /// ScaleFactor method is used to change the scale factor of the quantity of the ingredients. This method also includes an exception, used if the user does not input the correct data type or inncorrect char value.
     /// </summary>
