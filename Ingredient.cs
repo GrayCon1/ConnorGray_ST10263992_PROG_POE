@@ -1,6 +1,3 @@
-using System.Threading.Tasks.Dataflow;
-using static System.Console;
-
 public class Ingredient
 {
     public string Name { get; set; }
@@ -8,7 +5,7 @@ public class Ingredient
     public string UnitMeasure { get; set; }
     public int Calories { get; set; }
     public string FoodGroup { get; set; }
-    private float Scale = 1;
+    private float previousScale = 1;
 
     /// <summary>
     /// Getters and setters being used for each ingredients to get parameters for each ingredient
@@ -30,14 +27,10 @@ public class Ingredient
     /// </summary>
     public void ResetScaleFactor()
     {
-        Quantity /= Scale;
+        Quantity /= previousScale;
+        Calories /= (int)previousScale;
     }
-    public String SelecetFoodGroup()
-    {
-        WriteLine("\n1. Carbohydrate (Bread)\n2. Protein (Beef)\n3. Fats (Butter)\n4. Vitmins (Oranges-Vitimin C)\n5. Minerals (Spinch-Iron)\n6. Fibre (Oats)\n7. Water");
-        String choice = ReadLine();
-        return choice;
-    }
+
     /// <summary>
     /// ScaleFactor method is used to change the scale factor of the quantity of the ingredients. This method also includes an exception, used if the user does not input the correct data type or inncorrect char value.
     /// </summary>
@@ -47,7 +40,8 @@ public class Ingredient
     public void ChangeScaleFactor(float scale)
     {
         Quantity *= scale;
-        Scale = scale;
+        Calories *= (int)scale;
+        previousScale = scale;
     }
 }
 //=========================================================== EndOfProgram ===========================================================//

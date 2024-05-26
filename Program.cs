@@ -4,20 +4,24 @@ namespace ConnorGray_ST10263992_PROG6221_POE;
 
 public class Program
 {
-    private static Recipe recipe;
-    private static Ingredient ingredient;
-    private static List<String> Recipes = new List<String>();
+    private static Recipe currentRecipe;
+    private static List<Recipe> Recipes = new List<Recipe>();
 
     private static void Main()
     {
-        UI();
+        while (true)
+        {
+            UI();
+        }
     }
 
     private static void UI()
     {
-        Header("Recipe Creator:");
+        ForegroundColor = ConsoleColor.Magenta;
+        WriteLine("Recipe Creator");
+        ForegroundColor = ConsoleColor.White;
         WriteLine(
-            "\n1. Create Recipe\n2. Display Recipe\n3. Change Scale Factor\n4. Reset Scale Factor\n5. Display Saved Recipes\n6. End Program"
+            "1. Create Recipe\n2. Display Recipe\n3. Change Scale Factor\n4. Reset Scale Factor\n5. Display Saved Recipes\n6. End Program"
         );
         string input = ReadLine();
         bool success = int.TryParse(input, out int choice);
@@ -52,13 +56,13 @@ public class Program
                 EndOfProgram();
                 break;
         }
-        WriteLine("\n\n");
+        WriteLine("\n");
     }
 
     private static void ResetScaleFactor()
     {
-        recipe.ResetScaleFactors();
-        recipe.DisplayRecipe();
+        currentRecipe.ResetScaleFactors();
+        currentRecipe.DisplayRecipe();
     }
 
     private static void ChangeScaleFactor()
@@ -67,8 +71,8 @@ public class Program
         {
             WriteLine("a) Halved\nb) Double\nc) Tripled");
             string choice = ReadLine();
-            recipe.ChangeScaleFactor(choice);
-            recipe.DisplayRecipe();
+            currentRecipe.ChangeScaleFactor(choice);
+            currentRecipe.DisplayRecipe();
         }
         catch (Exception e)
         {
@@ -78,7 +82,7 @@ public class Program
 
     private static void DisplayRecipe()
     {
-        recipe.DisplayRecipe();
+        currentRecipe.DisplayRecipe();
     }
 
     private static void CreateRecipe()
@@ -90,7 +94,8 @@ public class Program
         WriteLine("Enter number of steps:");
         int stepCountInput = int.Parse(ReadLine());
 
-        recipe = new Recipe(name, ingredientCountInput, stepCountInput);
+        currentRecipe = new Recipe(name, ingredientCountInput, stepCountInput);
+        Recipes.Add(currentRecipe);
         for (int i = 0; i < ingredientCountInput; i++)
         {
             WriteLine("Enter ingredient name:");
@@ -102,38 +107,72 @@ public class Program
             WriteLine("Enter the calories for this ingrdient:");
             int calories = int.Parse(ReadLine());
             WriteLine("Enter the food group of the ingredient:");
-            //
-            string foodGroup = ingredient.SelecetFoodGroup();
-            recipe.CreateIngredient(i, ingredientName, quantity, unitMeasure, calories, foodGroup);
+            string foodGroup = ReadLine();
+            currentRecipe.CreateIngredient(
+                ingredientName,
+                quantity,
+                unitMeasure,
+                calories,
+                foodGroup
+            );
         }
 
         for (int i = 0; i < stepCountInput; i++)
         {
             WriteLine("Enter step " + (i + 1) + " description:");
             string stepDescription = ReadLine();
-            recipe.CreateStep(i, stepDescription);
+            currentRecipe.CreateStep(i, stepDescription);
         }
-        Recipes.Add(name);
-        Header("Recipe Created!\n\n");
+        ForegroundColor = ConsoleColor.Green;
+        WriteLine("Recipe Created");
+        ForegroundColor = ConsoleColor.White;
         UI();
     }
 
     private static void DisplayAll()
     {
-        Recipes.Sort();
-        int count = 1;
-        foreach (string recipeName in Recipes)
+        if (Recipes.Count <= 0)
         {
-            WriteLine("Recipe Names:\n" + count + ". " + recipeName);
-            count += 1;
+            WriteLine("No recipes saved");
+            return;
         }
+
+        string[] names = new string[Recipes.Count];
+        for (int i = 0; i < names.Length; i++)
+        {
+            names[i] = Recipes[i].Name;
+        }
+
+        for (int i = 0; i < names.Length; i++)
+        {
+            for (int j = i + 1; j < names.Length; j++)
+            {
+                if (names[i].CompareTo(names[j]) > 0)
+                {
+                    string tempNane = names[i];
+                    names[i] = names[j];
+                    names[j] = tempNane;
+
+                    Recipe tempRecipe = Recipes[i];
+                    Recipes[i] = Recipes[j];
+                    Recipes[j] = tempRecipe;
+                }
+            }
+        }
+
+        WriteLine("Recipe Names:\n");
+        for (int i = 0; i < Recipes.Count; i++)
+        {
+            WriteLine(i + 1 + ". " + Recipes[i].Name);
+        }
+
         WriteLine("Select a saved recipe to view:");
-        int RecipeSelected = int.Parse(ReadLine());
-    }
-    private static void Header(String headerText)
-    {
+        int recipeSelectedIndex = int.Parse(ReadLine());
+        Recipe recipeSelected = Recipes[recipeSelectedIndex - 1];
+        recipeSelected.DisplayRecipe();
+        currentRecipe = recipeSelected;
         ForegroundColor = ConsoleColor.Green;
-        WriteLine("\t" + headerText);
+        WriteLine(currentRecipe.Name + " is now the current recipe");
         ForegroundColor = ConsoleColor.White;
     }
 

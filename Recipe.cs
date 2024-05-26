@@ -3,18 +3,20 @@ using static System.Console;
 public class Recipe
 {
     public string Name { get; set; }
-    public Ingredient[] Ingredients { get; set; }
-    public Steps[] Steps { get; set; }
+    public List<Ingredient> Ingredients { get; set; }
+    public List<Steps> Steps { get; set; }
+    private delegate void CaloriesTooHigh();
+    private CaloriesTooHigh caloriesTooHigh;
 
     public Recipe(string name, int ingredientCount, int stepCount)
     {
         Name = name;
-        Ingredients = new Ingredient[ingredientCount];
-        Steps = new Steps[stepCount];
+        Ingredients = new List<Ingredient>(ingredientCount);
+        Steps = new List<Steps>(stepCount);
     }
+
     public void ChangeScaleFactor(string choice)
     {
-
         choice = choice.ToLower();
         float Scale = 0;
         if (choice == "a")
@@ -29,28 +31,34 @@ public class Recipe
         {
             Scale = 3;
         }
-        for (int i = 0; i < Ingredients.Length; i++)
+        for (int i = 0; i < Ingredients.Count; i++)
         {
             Ingredients[i].ChangeScaleFactor(Scale);
         }
-
     }
+
     public void ResetScaleFactors()
     {
-        for (int i = 0; i < Ingredients.Length; i++)
+        for (int i = 0; i < Ingredients.Count; i++)
         {
             Ingredients[i].ResetScaleFactor();
         }
     }
 
-    public void CreateIngredient(int index, string name, float quantity, string unitMeasure, int calories, string foodGroup)
+    public void CreateIngredient(
+        string name,
+        float quantity,
+        string unitMeasure,
+        int calories,
+        string foodGroup
+    )
     {
-        Ingredients[index] = new Ingredient(name, quantity, unitMeasure, calories, foodGroup);
+        Ingredients.Add(new Ingredient(name, quantity, unitMeasure, calories, foodGroup));
     }
 
     public void CreateStep(int index, string stepDescription)
     {
-        Steps[index] = new Steps(index, stepDescription);
+        Steps.Add(new Steps(index, stepDescription));
     }
 
     public void DisplayRecipe()
@@ -59,7 +67,9 @@ public class Recipe
         WriteLine("Ingredients:");
         foreach (var ingredient in Ingredients)
         {
-            WriteLine($"- {ingredient.Name}\t{ingredient.Quantity} {ingredient.UnitMeasure}\t{ingredient.Calories}cals");
+            WriteLine(
+                $"- {ingredient.Name}\t{ingredient.Quantity} {ingredient.UnitMeasure}\t{ingredient.Calories}cals"
+            );
         }
         WriteLine("Steps:");
         foreach (var step in Steps)
@@ -67,8 +77,8 @@ public class Recipe
             WriteLine($"- {step.StepCount + 1}. {step.StepDescription}");
         }
         WriteLine("Total Calories for recipe:\n" + CalorieCalculate() + " cal");
-
     }
+
     public int CalorieCalculate()
     {
         int calTotal = 0;
@@ -79,9 +89,14 @@ public class Recipe
 
         if (calTotal > 300)
         {
-            //throw execption
+            caloriesTooHigh = CalorieHigh;
+            caloriesTooHigh();
         }
         return calTotal;
     }
 
+    private void CalorieHigh()
+    {
+        WriteLine("Warning: This recipe is high in calories!");
+    }
 }
