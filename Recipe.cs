@@ -9,20 +9,32 @@ public class Recipe
     public List<Steps> Steps { get; set; }
     private delegate void CaloriesTooHigh();
     private CaloriesTooHigh caloriesTooHigh;
-
+    /// <summary>
+    /// Constructor for Recipe class
+    /// </summary>
+    /// <param name="name"></param>
+    /// <param name="ingredientCount"></param>
+    /// <param name="stepCount"></param>
     public Recipe(string name, int ingredientCount, int stepCount)
     {
         Name = name;
         Ingredients = new List<Ingredient>(ingredientCount);
         Steps = new List<Steps>(stepCount);
     }
+    /// <summary>
+    /// Select Food Group shows the user the different food groups they can select as well as shows examples of each
+    /// </summary>
+    /// <returns></returns>
     public String SelectFoodGroup()
     {
         WriteLine("\n1. Carbohydrate (Bread)\n2. Protein (Beef)\n3. Fats (Butter)\n4. Vitmins (Oranges-Vitimin C)\n5. Minerals (Spinch-Iron)\n6. Fibre (Oats)\n7. Water");
         String choice = ReadLine();
         return choice;
     }
-
+    /// <summary>
+    /// Changes the scale factor based on the choice the user makes
+    /// </summary>
+    /// <param name="choice"></param>
     public void ChangeScaleFactor(string choice)
     {
         choice = choice.ToLower();
@@ -44,7 +56,9 @@ public class Recipe
             Ingredients[i].ChangeScaleFactor(Scale);
         }
     }
-
+    /// <summary>
+    /// Resets the scale factor of the recipe is it was changed
+    /// </summary>
     public void ResetScaleFactors()
     {
         for (int i = 0; i < Ingredients.Count; i++)
@@ -52,7 +66,14 @@ public class Recipe
             Ingredients[i].ResetScaleFactor();
         }
     }
-
+    /// <summary>
+    /// Creates an ingredient with all of the necessary varibles
+    /// </summary>
+    /// <param name="name"></param>
+    /// <param name="quantity"></param>
+    /// <param name="unitMeasure"></param>
+    /// <param name="calories"></param>
+    /// <param name="foodGroup"></param>
     public void CreateIngredient(
         string name,
         float quantity,
@@ -63,12 +84,18 @@ public class Recipe
     {
         Ingredients.Add(new Ingredient(name, quantity, unitMeasure, calories, foodGroup));
     }
-
+    /// <summary>
+    /// Adds the steps as well as the descriptions
+    /// </summary>
+    /// <param name="index"></param>
+    /// <param name="stepDescription"></param>
     public void CreateStep(int index, string stepDescription)
     {
         Steps.Add(new Steps(index, stepDescription));
     }
-
+    /// <summary>
+    /// Displays the full current recipe
+    /// </summary>
     public void DisplayRecipe()
     {
         WriteLine($"Recipe: {Name}");
@@ -86,7 +113,10 @@ public class Recipe
         }
         WriteLine(CalorieCalculate());
     }
-
+    /// <summary>
+    /// Calulates the calories of the of the recipe as well as tells the user if the recipe is high or low in calories
+    /// </summary>
+    /// <returns></returns>
     public string CalorieCalculate()
     {
         int calTotal = 0;
@@ -114,7 +144,9 @@ public class Recipe
         }
         return calReturn;
     }
-
+    /// <summary>
+    /// Method used in the delegate to show the user that the recipe is high in calories.
+    /// </summary>
     private void CalorieHigh()
     {
         Util.Header("Warning: This recipe is high in calories!", ConsoleColor.Red, ConsoleColor.White);

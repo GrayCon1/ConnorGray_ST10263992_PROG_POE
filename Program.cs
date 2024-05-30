@@ -17,6 +17,7 @@ public class Program
 
     private static void UI()
     {
+        //Menu that allows user to enter a number corresonding to different actions of the program
         Util.Header("\tRecipe Creator\n\n", ConsoleColor.Magenta, ConsoleColor.White);
         WriteLine(
             "1. Create Recipe\n2. Display Recipe\n3. Change Scale Factor\n4. Reset Scale Factor\n5. Display Saved Recipes\n6. End Program"
@@ -49,20 +50,27 @@ public class Program
             case 5:
                 DisplayAll();
                 break;
-            default:
             case 6:
                 EndOfProgram();
+                break;
+            default:
+                WriteLine("Invalid Choice");
                 break;
         }
         WriteLine("\n");
     }
 
+    /// <summary>
+    /// Calls the method in Recipe to rest the scale factor of the current recipe
+    /// </summary>
     private static void ResetScaleFactor()
     {
         currentRecipe.ResetScaleFactors();
         currentRecipe.DisplayRecipe();
     }
-
+    /// <summary>
+    /// Calls the method in Recipe to change the scale factor of the current recipe
+    /// </summary>
     private static void ChangeScaleFactor()
     {
         try
@@ -77,12 +85,16 @@ public class Program
             WriteLine("Entered value not valid" + e.Message);
         }
     }
-
+    /// <summary>
+    /// Calls the method in Recipe To dispaly the made recipe
+    /// </summary>
     private static void DisplayRecipe()
     {
         currentRecipe.DisplayRecipe();
     }
-
+    /// <summary>
+    /// Calls the method in Recipe to create a Recipe allowing the user to enter all necessary information
+    /// </summary>
     private static void CreateRecipe()
     {
         WriteLine("Enter recipe name:");
@@ -91,7 +103,7 @@ public class Program
         int ingredientCountInput = int.Parse(ReadLine());
         WriteLine("Enter number of steps:");
         int stepCountInput = int.Parse(ReadLine());
-        currentRecipe = new Recipe(name, ingredientCountInput, stepCountInput);
+        currentRecipe = new Recipe(name, ingredientCountInput, stepCountInput); // adds to current recipe so that it can be used to display current recipe
         Recipes.Add(currentRecipe);
         for (int i = 0; i < ingredientCountInput; i++)
         {
@@ -111,22 +123,24 @@ public class Program
                 unitMeasure,
                 calories,
                 foodGroup
-            );
+            ); // information used to create a new recipe and adds to list
         }
 
         for (int i = 0; i < stepCountInput; i++)
         {
             WriteLine("Enter step " + (i + 1) + " description:");
             string stepDescription = ReadLine();
-            currentRecipe.CreateStep(i, stepDescription);
+            currentRecipe.CreateStep(i, stepDescription);// information used to create a new recipe
         }
         Util.Header("Recipe Created and Saved!\n\n", ConsoleColor.Green, ConsoleColor.White);
         UI();
     }
-
+    /// <summary>
+    /// Method to display all of the different recipes that are stored in the List as well as all of their ingredients, steps , food groups and calories
+    /// </summary>
     private static void DisplayAll()
-    {
-        if (Recipes.Count <= 0)
+    {   
+        if (Recipes.Count <= 0)// if no recipes are found in the list
         {
             WriteLine("No recipes saved");
             return;
@@ -166,7 +180,7 @@ public class Program
         Recipe recipeSelected = Recipes[recipeSelectedIndex - 1];
         recipeSelected.DisplayRecipe();
         currentRecipe = recipeSelected;
-        Util.Header(currentRecipe.Name + " is now the current recipe", ConsoleColor.Green, ConsoleColor.White);
+        Util.Header(currentRecipe.Name + " is now the current recipe", ConsoleColor.Green, ConsoleColor.White); // if a recipe is selected in the list becomes current recipe
     }
 
     /// <summary>
