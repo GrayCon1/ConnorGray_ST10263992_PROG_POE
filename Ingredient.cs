@@ -1,3 +1,4 @@
+using static System.Console;
 public class Ingredient
 {
     public string Name { get; set; }
@@ -43,5 +44,6 @@ public class Ingredient
         Calories *= (int)scale;
         previousScale = scale;
     }
+
 }
 //=========================================================== EndOfProgram ===========================================================//

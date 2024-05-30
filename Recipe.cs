@@ -1,7 +1,9 @@
+using ConnorGray_ST10263992_PROG6221_POE;
 using static System.Console;
 
 public class Recipe
 {
+
     public string Name { get; set; }
     public List<Ingredient> Ingredients { get; set; }
     public List<Steps> Steps { get; set; }
@@ -13,6 +15,12 @@ public class Recipe
         Name = name;
         Ingredients = new List<Ingredient>(ingredientCount);
         Steps = new List<Steps>(stepCount);
+    }
+    public String SelectFoodGroup()
+    {
+        WriteLine("\n1. Carbohydrate (Bread)\n2. Protein (Beef)\n3. Fats (Butter)\n4. Vitmins (Oranges-Vitimin C)\n5. Minerals (Spinch-Iron)\n6. Fibre (Oats)\n7. Water");
+        String choice = ReadLine();
+        return choice;
     }
 
     public void ChangeScaleFactor(string choice)
@@ -76,27 +84,40 @@ public class Recipe
         {
             WriteLine($"- {step.StepCount + 1}. {step.StepDescription}");
         }
-        WriteLine("Total Calories for recipe:\n" + CalorieCalculate() + " cal");
+        WriteLine(CalorieCalculate());
     }
 
-    public int CalorieCalculate()
+    public string CalorieCalculate()
     {
         int calTotal = 0;
         foreach (var calories in Ingredients)
         {
             calTotal += calories.Calories;
         }
-
-        if (calTotal > 300)
+        string calReturn;
+        if (calTotal <= 300)
         {
+            ForegroundColor = ConsoleColor.Green;
+            calReturn = "This recipe is low in calories: " + calTotal + " cal";
+            ForegroundColor = ConsoleColor.White;
+        }
+        else if (calTotal > 300 && calTotal < 700)
+        {
+            calReturn = "This recipe is high in calories: " + calTotal + " cal";
             caloriesTooHigh = CalorieHigh;
             caloriesTooHigh();
         }
-        return calTotal;
+        else
+        {
+            calReturn = "This recipe is extremly high in calories: " + calTotal + " cal";
+            caloriesTooHigh();
+        }
+        return calReturn;
     }
 
     private void CalorieHigh()
     {
-        WriteLine("Warning: This recipe is high in calories!");
+        Util.Header("Warning: This recipe is high in calories!", ConsoleColor.Red, ConsoleColor.White);
+        WriteLine();
     }
 }
