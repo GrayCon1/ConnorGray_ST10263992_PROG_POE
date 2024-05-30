@@ -17,9 +17,7 @@ public class Program
 
     private static void UI()
     {
-        ForegroundColor = ConsoleColor.Magenta;
-        WriteLine("Recipe Creator");
-        ForegroundColor = ConsoleColor.White;
+        Util.Header("\tRecipe Creator\n\n", ConsoleColor.Magenta, ConsoleColor.White);
         WriteLine(
             "1. Create Recipe\n2. Display Recipe\n3. Change Scale Factor\n4. Reset Scale Factor\n5. Display Saved Recipes\n6. End Program"
         );
@@ -93,7 +91,6 @@ public class Program
         int ingredientCountInput = int.Parse(ReadLine());
         WriteLine("Enter number of steps:");
         int stepCountInput = int.Parse(ReadLine());
-
         currentRecipe = new Recipe(name, ingredientCountInput, stepCountInput);
         Recipes.Add(currentRecipe);
         for (int i = 0; i < ingredientCountInput; i++)
@@ -107,7 +104,7 @@ public class Program
             WriteLine("Enter the calories for this ingrdient:");
             int calories = int.Parse(ReadLine());
             WriteLine("Enter the food group of the ingredient:");
-            string foodGroup = ReadLine();
+            string foodGroup = currentRecipe.SelectFoodGroup();
             currentRecipe.CreateIngredient(
                 ingredientName,
                 quantity,
@@ -123,9 +120,7 @@ public class Program
             string stepDescription = ReadLine();
             currentRecipe.CreateStep(i, stepDescription);
         }
-        ForegroundColor = ConsoleColor.Green;
-        WriteLine("Recipe Created");
-        ForegroundColor = ConsoleColor.White;
+        Util.Header("Recipe Created and Saved!\n\n", ConsoleColor.Green, ConsoleColor.White);
         UI();
     }
 
@@ -171,9 +166,7 @@ public class Program
         Recipe recipeSelected = Recipes[recipeSelectedIndex - 1];
         recipeSelected.DisplayRecipe();
         currentRecipe = recipeSelected;
-        ForegroundColor = ConsoleColor.Green;
-        WriteLine(currentRecipe.Name + " is now the current recipe");
-        ForegroundColor = ConsoleColor.White;
+        Util.Header(currentRecipe.Name + " is now the current recipe", ConsoleColor.Green, ConsoleColor.White);
     }
 
     /// <summary>
