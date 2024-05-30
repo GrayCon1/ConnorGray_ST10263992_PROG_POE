@@ -1,4 +1,4 @@
-# ST10263992 Connor Gray PROG POE PART 1
+# ST10263992 Connor Gray PROG POE PART 2
 
 ## About
 The following project can also be found on my GitHub repository: https://github.com/GrayCon1/ConnorGray_ST10263992_PROG_POE
@@ -15,20 +15,20 @@ Once opened select to run the program.
 
 ### Step 4 
 Now that the program has launched, the user shall be shown a menu to select the function of the program:
--Create Recipe 
--Display Recipe
--Change Scale Factor of the Recipe
--Reset the Scale Factor of the Recipe
--Display all saved Recipe
--End the program.
+  -Create Recipe 
+  -Display Recipe
+  -Change Scale Factor of the Recipe
+  -Reset the Scale Factor of the Recipe
+  -Display all saved Recipe
+  -End the program.
 
 ### Step 5
 If the user creates a new recipe they will be asked to give it:
 Name
--Number of ingredients, name of each ingredient, quantity of it, unit of measure of it
--How many calories
--Foodgroup it falls under>
--Number of steps in the recipe and a description of the steps
+  -Number of ingredients, name of each ingredient, quantity of it, unit of measure of it
+  -How many calories
+  -Foodgroup it falls under>
+  -Number of steps in the recipe and a description of the steps
 
 >This will automatically save the recipe
 
