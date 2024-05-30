@@ -15,20 +15,20 @@ Once opened select to run the program.
 
 ### Step 4 
 Now that the program has launched, the user shall be shown a menu to select the function of the program:
-  -Create Recipe 
-  -Display Recipe
-  -Change Scale Factor of the Recipe
-  -Reset the Scale Factor of the Recipe
-  -Display all saved Recipe
-  -End the program.
+  1. Create Recipe 
+  2. Display Recipe
+  3. Change the Scale Factor of the Recipe
+  4. Reset the Scale Factor of the Recipe
+  5. Display all saved Recipe
+  6. End the program.
 
 ### Step 5
 If the user creates a new recipe they will be asked to give it:
 Name
-  -Number of ingredients, name of each ingredient, quantity of it, unit of measure of it
-  -How many calories
-  -Foodgroup it falls under>
-  -Number of steps in the recipe and a description of the steps
+  1. Number of ingredients, name of each ingredient, the quantity of it, the unit of measure of it
+  2. How many calories
+  3. Foodgroup it falls under>
+  4. Number of steps in the recipe and a description of the steps
 
 >This will automatically save the recipe
 
@@ -39,7 +39,7 @@ The user can create as many Recipes as they like as they will be saved until the
 Now that more recipes are created the user can display all saved recipes and depending on which one is selected, that will become their current recipe.
 
 ### Step 7
-The user can now display the current recipe, create more, change the scale factor, reset it, or just end the program.
+The user can display the current recipe, create more, change the scale factor, reset it, or end the program.
 
 ### Step 8
 Enjoy :)
