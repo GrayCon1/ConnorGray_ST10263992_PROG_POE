@@ -32,6 +32,6 @@ The user can now display the current recipe, create more, change the scale facto
 Enjoy :)
 
 ## This is an example of the Different options
-<img src="/Images/image (8).png" alt="Steps in POE"/>
+<img src="/Images/Recipe_Creator.png" alt="Recipe Creator.png"/>
 
 # !!! End of Program !!!
