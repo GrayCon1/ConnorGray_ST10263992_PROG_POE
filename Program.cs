@@ -9,7 +9,7 @@ public class Program
 
     private static void Main()
     {
-        while (true)
+        while (true) // loop that allows the user to keep using the program until they decide to end it
         {
             UI();
         }
@@ -54,7 +54,7 @@ public class Program
                 EndOfProgram();
                 break;
             default:
-                WriteLine("Invalid Choice");
+                WriteLine("Invalid Choice");// if the user enters anything other than the options
                 break;
         }
         WriteLine("\n");
@@ -80,7 +80,7 @@ public class Program
             currentRecipe.ChangeScaleFactor(choice);
             currentRecipe.DisplayRecipe();
         }
-        catch (Exception e)
+        catch (Exception e)// catches any exceptions that may occur
         {
             WriteLine("Entered value not valid" + e.Message);
         }
@@ -97,25 +97,25 @@ public class Program
     /// </summary>
     private static void CreateRecipe()
     {
-        WriteLine("Enter recipe name:");
+        WriteLine("Enter recipe name:"); // user enters the name of the recipe
         string name = ReadLine();
-        WriteLine("Enter number of ingredients:");
+        WriteLine("Enter number of ingredients:"); // user enters the number of ingredients
         int ingredientCountInput = int.Parse(ReadLine());
-        WriteLine("Enter number of steps:");
+        WriteLine("Enter number of steps:"); // user enters the number of steps
         int stepCountInput = int.Parse(ReadLine());
         currentRecipe = new Recipe(name, ingredientCountInput, stepCountInput); // adds to current recipe so that it can be used to display current recipe
-        Recipes.Add(currentRecipe);
+        Recipes.Add(currentRecipe);// adds to list of recipes
         for (int i = 0; i < ingredientCountInput; i++)
         {
-            WriteLine("Enter ingredient name:");
+            WriteLine("Enter ingredient name:"); // enters the name of the ingredient
             string ingredientName = ReadLine();
-            WriteLine("Enter the quantity:");
+            WriteLine("Enter the quantity:"); // enters the quantity of the ingredient
             float quantity = float.Parse(ReadLine());
-            WriteLine("Enter the unit of measure:");
+            WriteLine("Enter the unit of measure:"); // enters the unit of measure of the ingredient
             string unitMeasure = ReadLine();
-            WriteLine("Enter the calories for this ingrdient:");
+            WriteLine("Enter the calories for this ingrdient:"); // enters the calories of the ingredient
             int calories = int.Parse(ReadLine());
-            WriteLine("Enter the food group of the ingredient:");
+            WriteLine("Enter the food group of the ingredient:"); // enters the food group of the ingredient
             string foodGroup = currentRecipe.SelectFoodGroup();
             currentRecipe.CreateIngredient(
                 ingredientName,
@@ -169,7 +169,7 @@ public class Program
             }
         }
 
-        WriteLine("Recipe Names:\n");
+        WriteLine("Recipe Names:\n");// displays the names of the recipes
         for (int i = 0; i < Recipes.Count; i++)
         {
             WriteLine(i + 1 + ". " + Recipes[i].Name);
