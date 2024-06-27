@@ -1,0 +1,38 @@
+﻿<Window x:Class="ST10263992_PROG_WPF.CreateRecipe"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ST10263992_PROG_WPF"
+        mc:Ignorable="d"
+        Title="CreateRecipe" Height="450" Width="838">
+    <Grid Background="DimGray">
+        <Rectangle Stroke="Black" Margin="299,107,395,66" Fill="#FF8E8E8E"/>
+
+        <Rectangle Stroke="Black" Margin="130,107,566,66" Fill="#FF8E8E8E"/>
+
+        <Rectangle HorizontalAlignment="Left" Height="404" Margin="528,20,0,0" Stroke="Black" VerticalAlignment="Top" Width="292" Fill="White"/>
+        <TextBox x:Name="edtRecipeName" HorizontalAlignment="Left" Margin="223,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock x:Name="tblockOutput" TextWrapping="Wrap" Margin="539,26,29,221" Text=""/>
+        <Label Content="Create New Recipe" Margin="314,10,314,387" FontSize="18" FontFamily="Copperplate Gothic Bold"/>
+        <Label Content="Name of the recipe" Margin="223,58,490,350" FontFamily="Cooper Black"/>
+        <TextBox x:Name="edtIngredentName" HorizontalAlignment="Left" Margin="138,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Name of Ingredent" Margin="138,107,573,301" FontFamily="Cooper Black" FontSize="10"/>
+        <TextBox x:Name="edtQuantity" HorizontalAlignment="Left" Margin="138,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Quantity" Margin="138,156,573,252" FontFamily="Cooper Black" FontSize="10"/>
+        <TextBox x:Name="edtMeasure" HorizontalAlignment="Left" Margin="138,226,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Unit of Measure" Margin="138,200,573,208" FontFamily="Cooper Black" FontSize="10"/>
+        <TextBox x:Name="edtDescription" HorizontalAlignment="Left" Margin="308,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" Height="111"/>
+        <Label Content="Food Group" Margin="138,244,573,164" FontFamily="Cooper Black" FontSize="10"/>
+        <ComboBox x:Name="cmbFoodGroup" HorizontalAlignment="Left" Margin="138,270,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Enter desciption for step" Margin="302,107,392,301" FontFamily="Cooper Black" FontSize="10"/>
+        <Button x:Name="btnAddDescription" Content="Add Description" Margin="328,344,424,72" FontSize="10" FontFamily="Cooper Black" Click="btnAddDescription_Click" ToolTip="Add as many step desciptions as needed"/>
+        <Button x:Name="btnAddIngredient" Content="Add Ingredient" Margin="155,344,597,72" FontFamily="Cooper Black" FontSize="10" Click="btnAddIngredient_Click" ToolTip="Add as many ingredients as required"/>
+        <Button x:Name="btnSaveRecipe" Content="Save" Margin="634,395,124,16" FontFamily="Cooper Black" FontSize="11" Click="btnSaveRecipe_Click"/>
+        <Label Content="Calories" Margin="138,296,573,112" FontFamily="Cooper Black" FontSize="10"/>
+        <TextBox x:Name="edtCalories" HorizontalAlignment="Left" Margin="138,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnBack" Content="Back" Margin="10,10,768,399" FontFamily="Cooper Black" Click="btnBack_Click"/>
+        <TextBlock x:Name="tblockOut" TextWrapping="Wrap" Margin="539,26,29,44" Text=""/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,25 @@
+﻿<Window x:Class="ST10263992_PROG_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ST10263992_PROG_WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="838">
+    <Grid Background="DimGray" RenderTransformOrigin="0.5,0.5">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="-0.045"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Label Content="Recipe Creator" Margin="321,31,375,370" Background="{x:Null}" FontFamily="Segoe UI Black" FontSize="18" FontWeight="Bold"/>
+        <Button x:Name="btnExit" Content="Exit" Margin="729,26,10,378" Background="Red" BorderBrush="Black" Foreground="Black" Click="btnExit_Click" FontFamily="Cooper Black"/>
+        <Button x:Name="btnCreateRecipe" Content="Create a Recipe" Margin="302,203,350,193" Background="Black" Foreground="White" BorderBrush="#FF737373" Click="btnCreateRecipe_Click"/>
+        <Button x:Name="btnDisplayRecipe" Content="Display Saved Recipes" Margin="301,263,351,133" Background="Black" Foreground="White" BorderBrush="#FF737373" Click="btnDisplayRecipe_Click"/>
+        <Button x:Name="btnSelectedRecipe" Content="Selected Recipe" Margin="300,144,353,250" Background="Black" Foreground="White" BorderBrush="#FF737373" Click="btnSelectedRecipe_Click"/>
+
+    </Grid>
+</Window>

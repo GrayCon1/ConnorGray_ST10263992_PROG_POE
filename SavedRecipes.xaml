@@ -1,0 +1,17 @@
+﻿<Window x:Class="ST10263992_PROG_WPF.SavedRecipes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ST10263992_PROG_WPF"
+        mc:Ignorable="d"
+        Title="SavedRecipes" Height="450" Width="838" Background="DimGray">
+    <Grid>
+        <Button x:Name="btnBack" Content="Back" Margin="10,10,768,399" FontFamily="Cooper Black" Click="btnBack_Click" Width="60" Height="25"/>
+        <TextBox x:Name="tBoxSavedRecipes" TextWrapping="Wrap" Margin="80,40,80,40" Width="678" Height="355"/>
+        <Button x:Name="btnFilter" Content="Filter" HorizontalAlignment="Left" Margin="628,14,0,0" VerticalAlignment="Top" Width="56" Click="btnFilter_Click" Height="20" FontFamily="Cooper Black"/>
+        <TextBox x:Name="edtSearch" HorizontalAlignment="Center" Margin="0,13,0,0" TextWrapping="Wrap" Text="Search..." VerticalAlignment="Top" Width="120" Height="22" MouseDown="edtSearch_MouseDown" MouseLeftButtonDown="edtSearch_MouseLeftButtonDown"/>
+        <ComboBox x:Name="cmbFilters" Width="120" Margin="503,12,215,399" Height="23"/>
+        <Button x:Name="btnReset" Content="Reset" Margin="689,12,80,398" FontFamily="Cooper Black" Click="btnReset_Click"/>
+    </Grid>
+</Window>

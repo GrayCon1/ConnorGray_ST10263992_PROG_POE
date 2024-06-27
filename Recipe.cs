@@ -1,155 +1,80 @@
-using ConnorGray_ST10263992_PROG6221_POE;
-using static System.Console;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public class Recipe
+namespace ST10263992_PROG_WPF
 {
+    public class Recipe
+    {
+        public string Name { get; set; }
+        private static Ingredient currentIng;
+        public List<Ingredient> Ingredients { get; set; } = new List<Ingredient>();
+        public List<Steps> Steps { get; set; } = new List<Steps>();
 
-    public string Name { get; set; }
-    public List<Ingredient> Ingredients { get; set; }
-    public List<Steps> Steps { get; set; }
-    private delegate void CaloriesTooHigh();
-    private CaloriesTooHigh caloriesTooHigh;
-    /// <summary>
-    /// Constructor for Recipe class
-    /// </summary>
-    /// <param name="name"></param>
-    /// <param name="ingredientCount"></param>
-    /// <param name="stepCount"></param>
-    public Recipe(string name, int ingredientCount, int stepCount)
-    {
-        Name = name;
-        Ingredients = new List<Ingredient>(ingredientCount);
-        Steps = new List<Steps>(stepCount);
-    }
-    /// <summary>
-    /// Select Food Group shows the user the different food groups they can select as well as shows examples of each
-    /// </summary>
-    /// <returns></returns>
-    public String SelectFoodGroup()
-    {
-        WriteLine("\n1. Carbohydrate (Bread)\n2. Protein (Beef)\n3. Fats (Butter)\n4. Vitmins (Oranges-Vitimin C)\n5. Minerals (Spinch-Iron)\n6. Fibre (Oats)\n7. Water");
-        String choice = ReadLine();
-        return choice;
-    }
-    /// <summary>
-    /// Changes the scale factor based on the choice the user makes
-    /// </summary>
-    /// <param name="choice"></param>
-    public void ChangeScaleFactor(string choice)
-    {
-        choice = choice.ToLower();
-        float Scale = 0;
-        if (choice == "a")
+        public Recipe(string name)
         {
-            Scale = 0.5f;
+            Name = name;
         }
-        else if (choice == "b")
-        {
-            Scale = 2;
-        }
-        else if (choice == "c")
-        {
-            Scale = 3;
-        }
-        for (int i = 0; i < Ingredients.Count; i++)
-        {
-            Ingredients[i].ChangeScaleFactor(Scale);
-        }
-    }
-    /// <summary>
-    /// Resets the scale factor of the recipe is it was changed
-    /// </summary>
-    public void ResetScaleFactors()
-    {
-        for (int i = 0; i < Ingredients.Count; i++)
-        {
-            Ingredients[i].ResetScaleFactor();
-        }
-    }
-    /// <summary>
-    /// Creates an ingredient with all of the necessary varibles
-    /// </summary>
-    /// <param name="name"></param>
-    /// <param name="quantity"></param>
-    /// <param name="unitMeasure"></param>
-    /// <param name="calories"></param>
-    /// <param name="foodGroup"></param>
-    public void CreateIngredient(
-        string name,
-        float quantity,
-        string unitMeasure,
-        int calories,
-        string foodGroup
+        public void CreateIngredient(
+                string name,
+                float quantity,
+                string unitMeasure,
+                int calories,
+                string foodGroup
     )
-    {
-        Ingredients.Add(new Ingredient(name, quantity, unitMeasure, calories, foodGroup));
-    }
-    /// <summary>
-    /// Adds the steps as well as the descriptions
-    /// </summary>
-    /// <param name="index"></param>
-    /// <param name="stepDescription"></param>
-    public void CreateStep(int index, string stepDescription)
-    {
-        Steps.Add(new Steps(index, stepDescription));
-    }
-    /// <summary>
-    /// Displays the full current recipe
-    /// </summary>
-    public void DisplayRecipe()
-    {
-        WriteLine($"Recipe: {Name}");
-        WriteLine("Ingredients:");
-        foreach (var ingredient in Ingredients)
         {
-            WriteLine(
-                $"- {ingredient.Name}\t{ingredient.Quantity} {ingredient.UnitMeasure}\t{ingredient.Calories}cals"
-            );
+            Ingredients.Add(new Ingredient(name, quantity, unitMeasure, calories, foodGroup));
         }
-        WriteLine("Steps:");
-        foreach (var step in Steps)
+        public void CreateStep( string stepDescription)
         {
-            WriteLine($"- {step.StepCount + 1}. {step.StepDescription}");
+            int index = Steps.Count;
+            Steps.Add(new Steps(index, stepDescription));
         }
-        WriteLine(CalorieCalculate());
-    }
-    /// <summary>
-    /// Calulates the calories of the of the recipe as well as tells the user if the recipe is high or low in calories
-    /// </summary>
-    /// <returns></returns>
-    public string CalorieCalculate()
-    {
-        int calTotal = 0;
-        foreach (var calories in Ingredients)
+        public string DisplayRecipe()
         {
-            calTotal += calories.Calories;
+            string Out = "\t\t"+ Name + "\n"+"Ingredients:\n";
+            foreach (var ingredient in Ingredients)
+            {
+                Out += $"- {ingredient.Name}\t{ingredient.Quantity} {ingredient.UnitMeasure}\t{ingredient.Calories}cals\t\t {ingredient.FoodGroup}\n";
+            }
+            Out += "\n"+CalorieCalculate();
+            Out +="\n\nSteps:\n";
+            foreach (var step in Steps)
+            {
+               Out+= $"- {step.StepCount + 1}. {step.StepDescription}\n";
+            }
+            
+            return Out;
         }
-        string calReturn;
-        if (calTotal <= 300)
+
+        public string CalorieCalculate()
         {
-            ForegroundColor = ConsoleColor.Green;
-            calReturn = "This recipe is low in calories: " + calTotal + " cal";
-            ForegroundColor = ConsoleColor.White;
+            int calTotal=CalorieTotal();
+            string calReturn;
+            if (calTotal <= 300)
+            {
+                calReturn = "This recipe is low in calories: " + calTotal + " cal";
+            }
+            else if (calTotal > 300 && calTotal < 700)
+            {
+                calReturn = "This recipe is high in calories: " + calTotal + " cal";
+            }
+            else
+            {
+                calReturn = "This recipe is extremly high in calories: " + calTotal + " cal";
+            }
+            return calReturn;
         }
-        else if (calTotal > 300 && calTotal < 700)
+        public int CalorieTotal()
         {
-            calReturn = "This recipe is high in calories: " + calTotal + " cal";
-            caloriesTooHigh = CalorieHigh;
-            caloriesTooHigh();
+            int calTotal = 0;
+            foreach (var calories in Ingredients)
+            {
+                calTotal += calories.Calories;
+            }
+            return calTotal;
         }
-        else
-        {
-            calReturn = "This recipe is extremly high in calories: " + calTotal + " cal";
-            caloriesTooHigh();
-        }
-        return calReturn;
-    }
-    /// <summary>
-    /// Method used in the delegate to show the user that the recipe is high in calories.
-    /// </summary>
-    private void CalorieHigh()
-    {
-        Util.Header("Warning: This recipe is high in calories!", ConsoleColor.Red, ConsoleColor.White);
-        WriteLine();
     }
 }
