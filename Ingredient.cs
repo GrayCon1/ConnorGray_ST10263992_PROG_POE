@@ -8,6 +8,7 @@ namespace ST10263992_PROG_WPF
 {
     public class Ingredient
     {
+       
         public string Name { get; set; }
         public float Quantity { get; set; }
         public string UnitMeasure { get; set; }

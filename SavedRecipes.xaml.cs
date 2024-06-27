@@ -41,6 +41,7 @@ namespace ST10263992_PROG_WPF
             cmbFilters.Items.Add("Food Groups");
             cmbFilters.Items.Add("Max Calories");
             cmbFilters.Items.Add("Display alphabatically");
+            cmbFilters.Items.Add("Select Recipe");
             Reset();
         }
         /// <summary>
@@ -86,13 +87,33 @@ namespace ST10263992_PROG_WPF
                     // MessageBox.Show("Displaying Recipes in Alphabetical Order");
                     SortAlphetically();
                     break;
-
+                case 4:
+                    // MessageBox.Show("Select Recipe");
+                    FilterByRecipe(edtSearch.Text);
+                    break;
 
             }
             edtSearch.Text = "Search...";
             btnReset.IsEnabled = true;
             btnFilter.IsEnabled = false;
 
+        }
+        /// <summary>
+        /// Function to search recipes by recipe name
+        /// </summary>
+        /// <param name="recipeName"></param>
+        public void FilterByRecipe(string recipeName)
+        {
+            int count = 0;
+            tBoxSavedRecipes.Text = "Saved Recipes";
+            foreach (Recipe recipe in MainWindow.Recipes)
+            {
+                if (recipe.Name == recipeName)
+                {
+                    count++;
+                    tBoxSavedRecipes.Text += "\n" + count + ")" + recipe.DisplayRecipe() + "\n";
+                }
+            }
         }
         /// <summary>
         /// Fucntion to filter recipes by ingredient
@@ -229,6 +250,10 @@ namespace ST10263992_PROG_WPF
                     cmbFoodGroup.Visibility = Visibility.Hidden;
                     break;
                 case 3:
+                    edtSearch.Visibility = Visibility.Visible;
+                    cmbFoodGroup.Visibility = Visibility.Hidden;
+                    break;
+                case 4:
                     edtSearch.Visibility = Visibility.Visible;
                     cmbFoodGroup.Visibility = Visibility.Hidden;
                     break;
