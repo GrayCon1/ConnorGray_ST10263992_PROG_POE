@@ -28,7 +28,7 @@
         <Label Content="Enter desciption for step" Margin="302,107,392,301" FontFamily="Cooper Black" FontSize="10" Width="144" Height="26"/>
         <Button x:Name="btnAddDescription" Content="Add Description" Margin="328,344,424,72" FontSize="10" FontFamily="Cooper Black" Click="btnAddDescription_Click" ToolTip="Add as many step desciptions as needed" Width="86" Height="18"/>
         <Button x:Name="btnAddIngredient" Content="Add Ingredient" Margin="155,344,597,72" FontFamily="Cooper Black" FontSize="10" Click="btnAddIngredient_Click" ToolTip="Add as many ingredients as required" Width="86" Height="18"/>
-        <Button x:Name="btnSaveRecipe" Content="Save" Margin="634,395,124,16" FontFamily="Cooper Black" FontSize="11" Click="btnSaveRecipe_Click" Width="80" Height="23"/>
+        <Button x:Name="btnSaveRecipe" Content="Save" Margin="634,390,124,21" FontFamily="Cooper Black" FontSize="11" Click="btnSaveRecipe_Click" Width="80" Height="23"/>
         <Label Content="Calories" Margin="138,296,573,112" FontFamily="Cooper Black" FontSize="10" Width="127" Height="26"/>
         <TextBox x:Name="edtCalories" HorizontalAlignment="Left" Margin="138,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18"/>
         <Button x:Name="btnBack" Content="Back" Margin="10,10,768,399" FontFamily="Cooper Black" Click="btnBack_Click" Width="60" Height="25"/>
