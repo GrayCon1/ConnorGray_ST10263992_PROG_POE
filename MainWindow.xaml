@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ST10263992_PROG_WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="838">
-    <Grid Background="DimGray" RenderTransformOrigin="0.5,0.5">
+        Title="MainWindow" Height="450" Width="838" HorizontalAlignment="Center" VerticalAlignment="Center" ResizeMode="CanResize" SizeToContent="Manual" >
+    <Grid Background="DimGray" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Center" Height="434" Width="835">
         <Grid.RenderTransform>
             <TransformGroup>
                 <ScaleTransform/>
@@ -19,7 +19,7 @@
         <Button x:Name="btnExit" Content="Exit" Margin="729,26,10,378" Background="Red" BorderBrush="Black" Foreground="Black" Click="btnExit_Click" FontFamily="Cooper Black"/>
         <Button x:Name="btnCreateRecipe" Content="Create a Recipe" Margin="302,203,350,193" Background="Black" Foreground="White" BorderBrush="#FF737373" Click="btnCreateRecipe_Click"/>
         <Button x:Name="btnDisplayRecipe" Content="Display Saved Recipes" Margin="301,263,351,133" Background="Black" Foreground="White" BorderBrush="#FF737373" Click="btnDisplayRecipe_Click"/>
-        <Button x:Name="btnSelectedRecipe" Content="Selected Recipe" Margin="300,144,353,250" Background="Black" Foreground="White" BorderBrush="#FF737373" Click="btnSelectedRecipe_Click"/>
+        <Button x:Name="btnSelectedRecipe" Content="Selected Recipe" Margin="300,144,353,250" Background="Black" Foreground="White" BorderBrush="#FF737373" Click="btnSelectedRecipe_Click" Height="40" Width="182"/>
 
     </Grid>
 </Window>

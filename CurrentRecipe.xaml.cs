@@ -18,18 +18,24 @@ namespace ST10263992_PROG_WPF
     /// Interaction logic for CurrentRecipe.xaml
     /// </summary>
     public partial class CurrentRecipe : Window
-    {
+    {   //Varible used in multiple methods
         private float previousScale = 1;
         public CurrentRecipe()
         {
             InitializeComponent();
+
             btnResetScale.IsEnabled = false;
             tblockSavedRecipe.Text = "Current Recipe\n===============\n";
+            //Display the last created recipe
             Recipe currentRecipe = MainWindow.Recipes[0];
             tblockSavedRecipe.Text += "\n" + currentRecipe.DisplayRecipe();
             lblCount.Content = sldScaleFactor.Value.ToString("0.##");
         }
-
+        /// <summary>
+        /// Back button taking user back to mainwindow
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = new MainWindow();
@@ -38,7 +44,7 @@ namespace ST10263992_PROG_WPF
         }
 
         private void btnConfimScale_Click(object sender, RoutedEventArgs e)
-        {
+        {   // Check if the scale factor is 0
             if (sldScaleFactor.Value == 0)
             {
                 MessageBox.Show("Please select a scale factor");
@@ -51,25 +57,32 @@ namespace ST10263992_PROG_WPF
             btnConfimScale.IsEnabled = false;
             btnResetScale.IsEnabled = true;
         }
+        /// <summary>
+        /// Reset the recipe to the previous scale
+        /// </summary>
         public void ResetScaleRecipe()
         {
             Recipe currentRecipe = MainWindow.Recipes[0];
             foreach (var ingredient in currentRecipe.Ingredients)
-            {
+            {//Sets recipe back to previous scale
                 ingredient.Quantity /= previousScale;
                 ingredient.Calories /= (int)previousScale;
             }
             tblockSavedRecipe.Text = "Current Recipe\n===============\n";
             tblockSavedRecipe.Text += "\n" + currentRecipe.DisplayRecipe();
         }
+        /// <summary>
+        /// Scale the recipe by the selected factor
+        /// </summary>
         public void ScaleRecipe()
         {
-            int ScaleFactor = Convert.ToInt32(sldScaleFactor.Value);
+            //user310291 (2011) demonstrates...
+            float ScaleFactor = (float)sldScaleFactor.Value; 
             Recipe currentRecipe = MainWindow.Recipes[0];
             foreach (var ingredient in currentRecipe.Ingredients)
-            {
+            {//Scales the recipe by the selected factor
                 ingredient.Quantity *= ScaleFactor;
-                ingredient.Calories *= ScaleFactor;
+                ingredient.Calories *= (int)ScaleFactor;
             }
             previousScale = ScaleFactor;
             tblockSavedRecipe.Text = "Current Recipe\n===============\n";
@@ -87,9 +100,10 @@ namespace ST10263992_PROG_WPF
         {
             if (lblCount != null)
             {
-                lblCount.Content = e.NewValue.ToString("0.##");
+                lblCount.Content = e.NewValue.ToString("0.##");//Display the scale factor in formated value
             }
 
         }
     }
 }
+//=========================================================== EndOfProgram ===========================================================//

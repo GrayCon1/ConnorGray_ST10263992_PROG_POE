@@ -21,6 +21,7 @@ namespace ST10263992_PROG_WPF
     public partial class CreateRecipe : Window
     {
         private Recipe currentRecipe;
+
         private  List<Recipe> Recipes = new List<Recipe>();
         public CreateRecipe()
         {
@@ -28,6 +29,7 @@ namespace ST10263992_PROG_WPF
             btnAddDescription.IsEnabled = true;
             btnAddIngredient.IsEnabled = true;
             btnSaveRecipe.IsEnabled = true;
+            // Combo Box Items being added
             cmbFoodGroup.Items.Add("Carbohydrate (Bread)");
             cmbFoodGroup.Items.Add("Protein (Meat)");
             cmbFoodGroup.Items.Add("Fats (Butter)");
@@ -59,7 +61,7 @@ namespace ST10263992_PROG_WPF
         }
 
         private void btnAddDescription_Click(object sender, RoutedEventArgs e)
-        {  
+        {  //Adds to the desciption of the recipe
             if (currentRecipe == null )
             {
                 currentRecipe = new Recipe(edtRecipeName.Text);
@@ -73,13 +75,19 @@ namespace ST10263992_PROG_WPF
 
         private void btnSaveRecipe_Click(object sender, RoutedEventArgs e)
         {
+            //Sets buttons to disabled so that the user cannot add more ingredients or steps or change recipe name
+            edtRecipeName.IsEnabled = false;
             btnAddDescription.IsEnabled = false;
             btnAddIngredient.IsEnabled = false;
             btnSaveRecipe.IsEnabled = false;
             MainWindow.Recipes.Add(currentRecipe);
             MessageBox.Show("Your recipe has been saved");
         }
-
+        /// <summary>
+        /// Back button taking user back to mainwindow
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = new MainWindow();
@@ -88,3 +96,4 @@ namespace ST10263992_PROG_WPF
         }
     }
 }
+//=========================================================== EndOfProgram ===========================================================//

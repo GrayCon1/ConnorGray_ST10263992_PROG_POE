@@ -12,11 +12,23 @@ namespace ST10263992_PROG_WPF
         private static Ingredient currentIng;
         public List<Ingredient> Ingredients { get; set; } = new List<Ingredient>();
         public List<Steps> Steps { get; set; } = new List<Steps>();
+        /// <summary>
+        /// Constructor for Recipe class
+        /// </summary>
+        /// <param name="name"></param>
 
         public Recipe(string name)
         {
             Name = name;
         }
+        /// <summary>
+        /// Creates an ingredient with all of the necessary varibles
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="quantity"></param>
+        /// <param name="unitMeasure"></param>
+        /// <param name="calories"></param>
+        /// <param name="foodGroup"></param>
         public void CreateIngredient(
                 string name,
                 float quantity,
@@ -27,17 +39,25 @@ namespace ST10263992_PROG_WPF
         {
             Ingredients.Add(new Ingredient(name, quantity, unitMeasure, calories, foodGroup));
         }
+        /// <summary>
+        /// Adds the steps as well as the descriptions
+        /// </summary>
+        /// <param name="index"></param>
+        /// <param name="stepDescription"></param>
         public void CreateStep( string stepDescription)
         {
             int index = Steps.Count;
             Steps.Add(new Steps(index, stepDescription));
         }
+        /// <summary>
+        /// Displays the full current recipe
+        /// </summary>
         public string DisplayRecipe()
         {
             string Out = "\t\t"+ Name + "\n"+"Ingredients:\n";
             foreach (var ingredient in Ingredients)
             {
-                Out += $"- {ingredient.Name}\t{ingredient.Quantity} {ingredient.UnitMeasure}\t{ingredient.Calories}cals\t\t {ingredient.FoodGroup}\n";
+                Out += $"- {ingredient.Name}\t{ingredient.Quantity:0.##} {ingredient.UnitMeasure}\t{ingredient.Calories}cals\t\t {ingredient.FoodGroup}\n";
             }
             Out += "\n"+CalorieCalculate();
             Out +="\n\nSteps:\n";
@@ -48,7 +68,10 @@ namespace ST10263992_PROG_WPF
             
             return Out;
         }
-
+        /// <summary>
+        /// Calulates the calories of the of the recipe as well as tells the user if the recipe is high or low in calories
+        /// </summary>
+        /// <returns></returns>
         public string CalorieCalculate()
         {
             int calTotal=CalorieTotal();
@@ -67,6 +90,10 @@ namespace ST10263992_PROG_WPF
             }
             return calReturn;
         }
+        /// <summary>
+        /// Finds the total calories of each ingredient
+        /// </summary>
+        /// <returns></returns>
         public int CalorieTotal()
         {
             int calTotal = 0;
@@ -78,3 +105,4 @@ namespace ST10263992_PROG_WPF
         }
     }
 }
+//=========================================================== EndOfProgram ===========================================================//

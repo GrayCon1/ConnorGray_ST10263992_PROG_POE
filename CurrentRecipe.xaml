@@ -6,16 +6,16 @@
         xmlns:local="clr-namespace:ST10263992_PROG_WPF"
         mc:Ignorable="d"
         Title="CurrentRecipe" Height="450" Width="838">
-    <Grid Background="DimGray">
-        <Label Content="Current Saved Recipe" Margin="300,10,300,381" FontFamily="Cooper Black" FontSize="20"/>
-        <Button x:Name="btnBack" Content="Back" Margin="10,10,768,399" FontFamily="Cooper Black" Click="btnBack_Click"/>
-        <Rectangle Stroke="Black" Margin="230,53,230,21" Fill="#FF9E9E9E"/>
-        <TextBlock x:Name="tblockSavedRecipe" TextWrapping="Wrap" Margin="249,76,249,41"/>
-        <Slider x:Name="sldScaleFactor" HorizontalAlignment="Left" Margin="33,141,0,0" VerticalAlignment="Top" Width="120" Minimum="0.1" SmallChange="1" Value="1" Background="#FF373737" ValueChanged="sldScaleFactor_ValueChanged"/>
-        <Label Content="Change the Scale of the Recipe" Margin="21,105,613,293" FontFamily="Cooper Black"/>
-        <Button x:Name="btnConfimScale" Content="Set Scale" Margin="33,171,722,243" FontFamily="Cooper Black" Click="btnConfimScale_Click"/>
-        <Button x:Name="btnResetScale" Content="Reset Scale" Margin="132,171,633,243" FontFamily="Cooper Black" Click="btnResetScale_Click"/>
-        <Label x:Name="lblCount" Content="1&#xA;" Margin="153,137,633,271" FontFamily="Cooper Black"/>
+    <Grid Background="DimGray" Width="838" Height="434">
+        <Label Content="Current Saved Recipe" Margin="300,10,300,381" FontFamily="Cooper Black" FontSize="20" Width="238" Height="43"/>
+        <Button x:Name="btnBack" Content="Back" Margin="10,10,768,399" FontFamily="Cooper Black" Click="btnBack_Click" Width="60" Height="25"/>
+        <Rectangle Stroke="Black" Margin="230,53,230,21" Fill="#FF9E9E9E" Width="378" Height="360"/>
+        <TextBlock x:Name="tblockSavedRecipe" TextWrapping="Wrap" Margin="249,76,249,41" Width="340" Height="317"/>
+        <Slider x:Name="sldScaleFactor" HorizontalAlignment="Left" Margin="33,141,0,0" VerticalAlignment="Top" Width="120" Minimum="0.1" SmallChange="1" Value="1" Background="#FF373737" ValueChanged="sldScaleFactor_ValueChanged" Height="18"/>
+        <Label Content="Change the Scale of the Recipe" Margin="21,105,613,293" FontFamily="Cooper Black" Width="204" Height="36"/>
+        <Button x:Name="btnConfimScale" Content="Set Scale" Margin="33,171,722,243" FontFamily="Cooper Black" Click="btnConfimScale_Click" Width="83" Height="20"/>
+        <Button x:Name="btnResetScale" Content="Reset Scale" Margin="132,171,633,243" FontFamily="Cooper Black" Click="btnResetScale_Click" Width="73" Height="20"/>
+        <Label x:Name="lblCount" Content="1&#xA;" Margin="153,137,633,271" FontFamily="Cooper Black" Width="52" Height="25" Foreground="White"/>
 
     </Grid>
 </Window>

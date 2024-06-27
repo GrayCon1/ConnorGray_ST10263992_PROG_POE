@@ -6,12 +6,13 @@
         xmlns:local="clr-namespace:ST10263992_PROG_WPF"
         mc:Ignorable="d"
         Title="SavedRecipes" Height="450" Width="838" Background="DimGray">
-    <Grid>
+    <Grid Width="838" Height="434">
         <Button x:Name="btnBack" Content="Back" Margin="10,10,768,399" FontFamily="Cooper Black" Click="btnBack_Click" Width="60" Height="25"/>
         <TextBox x:Name="tBoxSavedRecipes" TextWrapping="Wrap" Margin="80,40,80,40" Width="678" Height="355"/>
         <Button x:Name="btnFilter" Content="Filter" HorizontalAlignment="Left" Margin="628,14,0,0" VerticalAlignment="Top" Width="56" Click="btnFilter_Click" Height="20" FontFamily="Cooper Black"/>
         <TextBox x:Name="edtSearch" HorizontalAlignment="Center" Margin="0,13,0,0" TextWrapping="Wrap" Text="Search..." VerticalAlignment="Top" Width="120" Height="22" MouseDown="edtSearch_MouseDown" MouseLeftButtonDown="edtSearch_MouseLeftButtonDown"/>
-        <ComboBox x:Name="cmbFilters" Width="120" Margin="503,12,215,399" Height="23"/>
-        <Button x:Name="btnReset" Content="Reset" Margin="689,12,80,398" FontFamily="Cooper Black" Click="btnReset_Click"/>
+        <ComboBox x:Name="cmbFilters" Width="120" Margin="503,12,215,399" Height="23" SelectionChanged="cmbFilters_SelectionChanged"/>
+        <Button x:Name="btnReset" Content="Reset" Margin="689,12,80,398" FontFamily="Cooper Black" Click="btnReset_Click" Width="69" Height="24"/>
+        <ComboBox x:Name="cmbFoodGroup" Width="120" Margin="359,13,359,400" Height="21"/>
     </Grid>
 </Window>
