@@ -24,12 +24,12 @@ Exit
 The User can only create a new recipe as there is none stored, this will bring the user to the Create New Recipe Page.
 This Page requires the user to enter the following:
 
-A Name of the Recipe
-Name of an Ingredient
-Quantity of Ingredient
-Unit of Measure for the Quantity
-Food Group that the Ingredient Falls Under
-Calories of the Ingredient
+#### A Name of the Recipe
+#### Name of an Ingredient
+#### Quantity of Ingredient
+#### Unit of Measure for the Quantity
+#### Food Group that the Ingredient Falls Under
+#### Calories of the Ingredient
 
 A Description of each Step needed in the Recipe
 
@@ -46,19 +46,19 @@ On this page, the user is able to view all information on the recipe and is able
 Back on the MainWindow, the Display Saved Recipes button will bring the user to the Saved Recipes Page, on this page the user will be able to see a list of all Recipes as well as their ingredients and steps.
 The user is also able to filter this list of Recipes, there are five options, Name of Ingredients, Food Groups, Max Calories, Display alphabetically and Select Recipe.
 
-Name of Ingredients:
+#### Name of Ingredients:
 The User can enter a name of a specific Ingredient and will be shown a list with all of those Ingredients.
 
-Food Groups:
+#### Food Groups:
 The once before text box will now become a combobox showing all possible food groups and will be show a list of all Ingredients with that Food Group.
 
-Max Calories:
+#### Max Calories:
 The User can enter a Max Calorie for a Recipe and a list of the closest matches will be shown.
 
-Display Alphabetically:
+#### Display Alphabetically:
 This will sort the displayed list of Recipes Alphabetically.
 
-Select Recipe:
+#### Select Recipe:
 This will allow the user to enter the name of a specific Recipe and will only display this one.
 
 ### Step 9
